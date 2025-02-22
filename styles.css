@@ -296,6 +296,12 @@ main {
     transform: scale(1.2);
 }
 
+
+/* Add this to your styles.css file */
+.bottom-padding {
+    padding-bottom: 20px; /* Adjust the value as needed */
+}
+
 /* Styles for smaller screens (tablets, mobile devices) */
 @media (max-width: 768px) {
     nav ul li {
