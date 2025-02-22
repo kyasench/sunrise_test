@@ -343,7 +343,7 @@ main {
     text-decoration: none;
     display: block;
     margin: 10px 0;
-    font-size: 1.0rem; /* Reduced font size */
+    font-size: 0.9rem; /* Reduced font size */
 }
 
 .footer-divider {
