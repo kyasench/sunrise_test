@@ -311,7 +311,7 @@ main {
 
 /* Footer styles */
 .footer-top {
-    background-color: #1d1d1d; /* Dark grey background */
+    background-color: #0f0f0f; /* Dark grey background */
     padding: 20px 0;
     color: white;
 }
@@ -343,7 +343,7 @@ main {
     text-decoration: none;
     display: block;
     margin: 10px 0;
-    font-size: 0.7rem; /* Reduced font size */
+    font-size: 0.4rem; /* Reduced font size */
 }
 
 .footer-divider {
