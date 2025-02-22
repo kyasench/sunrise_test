@@ -339,11 +339,11 @@ main {
 }
 
 .footer-link {
-    color: rgba(255, 255, 255, 0.668);
+    color: rgba(255, 255, 255, 0.542);
     text-decoration: none;
     display: block;
     margin: 10px 0;
-    font-size: 0.9rem; /* Reduced font size */
+    font-size: 1.0rem; /* Reduced font size */
 }
 
 .footer-divider {
