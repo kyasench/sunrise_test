@@ -274,7 +274,8 @@ nav ul li .submenu li a:hover {
 main {
     margin-left: 1in;
     margin-right: 1in;
-    padding-top: 1in
+    padding-top: 1in;
+    padding-bottom: 1in;
 }
 
 .menu {
@@ -297,10 +298,7 @@ main {
 }
 
 
-/* Add this to your styles.css file */
-.bottom-padding {
-    padding-bottom: 30px; /* Adjust the value as needed */
-}
+
 
 /* Styles for smaller screens (tablets, mobile devices) */
 @media (max-width: 768px) {
@@ -317,7 +315,7 @@ main {
 
 /* Footer styles */
 .footer-top {
-    background-color: #0f0f0f; /* Dark grey background */
+    background-color: #373737; /* Dark grey background */
     padding: 20px 0;
     color: white;
 }
