@@ -63,18 +63,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #007bff; /* Adjust the background color as needed */
+    background-color: #1a69e0; /* Adjust the background color as needed */
     padding: 10px 20px;
+    margin-left: 1in; /* Align with other content */
+    margin-right: 1in; /* Align with other content */
 }
 
 .logo-title {
     display: flex;
     align-items: center;
-    margin-top: 30px; /* Add margin to move the logo down */
+    margin-top: 60px; /* Add margin to move the logo down */
 }
 
 .logo {
-    height: 50px; /* Adjust the logo size as needed */
+    height: 75px; /* Adjust the logo size as needed */
 }
 
 .page-title {
@@ -225,6 +227,7 @@ nav ul {
     display: flex;
     justify-content: space-between; /* Distribute space between menu items */
     text-align: right;
+    margin-right: 1in;
 }
 
 nav ul li {
@@ -288,7 +291,7 @@ nav ul li .submenu li a:hover {
 }
 
 main {
-    margin-left: 1in;
+    margin-left: 1in;C
     margin-right: 1in;
     padding-top: 1in;
     padding-bottom: 1.25in;
