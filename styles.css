@@ -289,12 +289,13 @@ nav ul li .submenu li a:hover {
 
 
 
-.social-media {;
+.social-media {
     display: flex;
     align-items: center;
     justify-content: flex-end; /* Move social media links to the right */
-    padding: 50px 20px;
+    padding: 10px 20px;
     background-color: #1a69e0; /* Adjust the background color as needed */
+    padding-right: 20px; /* Add padding to the right */
 }
 
 main {
