@@ -4,6 +4,27 @@ body {
     padding: 0;
 }
 
+/* Breadcrumb styles */
+.breadcrumb {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+#breadcrumb-placeholder {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
 .contact-info {
     text-align: right;
     color: white;
