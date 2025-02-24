@@ -1,29 +1,33 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 5;
-    padding: 0;
+
+/*HEADER: SOCIAL MEDIA LINKS within the header...*/
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Move social media links to the right */
+    padding: 60px 20px;
+    background-color: #1a69e0; /* Adjust the background color as needed */
+    padding-right: 0px; /* Add padding to the right */
+    padding-left: 60px;
 }
 
-/* Breadcrumb styles */
-.breadcrumb {
-    margin: 10px 0;
-    font-size: 0.9rem;
-    color: #666;
+.social-media a {
+    margin-left: 10px; /* Add margin to the left of each social media link */
 }
 
-.breadcrumb a {
-    color: #007bff;
-    text-decoration: none;
+.social-media img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
 }
 
-.breadcrumb a:hover {
-    text-decoration: underline;
+.social-media img:hover {
+    transform: scale(1.2);
 }
 
-#breadcrumb-placeholder {
-    margin-left: 20px;
-    flex-grow: 1;
-}
+
+
+/*HEADER: CONTACT information within the header...*/
 
 .contact-info {
     margin-left: auto; /* Align to the right */
@@ -45,6 +49,7 @@ body {
 }
 
 
+/*HEADER: Used to format the DONATE BUTTON within the header...*/
 
 .donate-button {
     margin-left: 20px; /* Add margin to the left of the donate button */
@@ -76,6 +81,10 @@ header {
     margin-right: 1in; /* Align with other content */
 }
 
+
+/*HEADER: LOGO and PAGE TITLE (e.g., Home, About Us, etc.) within the header */
+
+
 .logo-title {
     display: flex;
     align-items: center;
@@ -91,6 +100,111 @@ header {
     font-size: 1.5rem;
     margin: 0;
 }
+
+
+
+/* HEADER: BREADCRUMB styles within the header */
+
+.breadcrumb {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+#breadcrumb-placeholder {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+/*HEADER: MENU STYLES within the header...*/
+
+.menu {
+    margin-right: 0in;
+    padding-top: 0in;
+} 
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Distribute space between menu items */
+    text-align: right;
+}
+
+nav ul li {
+    position: relative;
+    margin-right: 0.3%; /* Adjusted margin */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.3rem 0.5rem; /* Adjusted padding */
+    font-size: 0.9rem; /* Adjusted font size */
+    white-space: nowrap; /* Prevent line break */
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 140%;
+    left: 0;
+    background-color: #1a69e0;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    z-index: 1000; /* Ensure submenu is above other content */
+    text-align: left; /* Ensure submenu items are aligned to the left */
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+nav ul li .submenu li {
+    display: block;
+    margin: 0;
+    padding: 0.5rem 0; /* Added padding to increase vertical space */
+}
+
+nav ul li .submenu li a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+nav ul li .submenu li a:hover {
+    background-color: #555;
+}
+
+
+
+/*BODY: MAIN CONTENT portion of each page...*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 5;
+    padding: 0;
+}
+
+
+/*BODY: General font sizes and styles...*/
 
 .text-very-large {
     font-family: 'Montserrat', sans-serif;
@@ -227,77 +341,9 @@ header {
 
 
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between; /* Distribute space between menu items */
-    text-align: right;
-}
-
-nav ul li {
-    position: relative;
-    margin-right: 0.3%; /* Adjusted margin */
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.3rem 0.5rem; /* Adjusted padding */
-    font-size: 0.9rem; /* Adjusted font size */
-    white-space: nowrap; /* Prevent line break */
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-
-nav ul li .submenu {
-    display: none;
-    position: absolute;
-    top: 140%;
-    left: 0;
-    background-color: #1a69e0;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    z-index: 1000; /* Ensure submenu is above other content */
-    text-align: left; /* Ensure submenu items are aligned to the left */
-}
-
-nav ul li:hover .submenu {
-    display: block;
-}
-
-nav ul li .submenu li {
-    display: block;
-    margin: 0;
-    padding: 0.5rem 0; /* Added padding to increase vertical space */
-}
-
-nav ul li .submenu li a {
-    padding: 0.5rem 1rem;
-    white-space: nowrap;
-}
-
-nav ul li .submenu li a:hover {
-    background-color: #555;
-}
 
 
 
-.social-media {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Move social media links to the right */
-    padding: 60px 20px;
-    background-color: #1a69e0; /* Adjust the background color as needed */
-    padding-right: 20px; /* Add padding to the right */
-    padding-left: 60px;
-}
 
 main {
     margin-left: 1in;
@@ -306,24 +352,8 @@ main {
     padding-bottom: 1.25in;
 }
 
-.menu {
-    margin-right: 0in;
-    padding-top: 0in;
-} 
 
-.social-media a {
-    margin-left: 10px; /* Add margin to the left of each social media link */
-}
 
-.social-media img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s;
-}
-
-.social-media img:hover {
-    transform: scale(1.2);
-}
 
 
 

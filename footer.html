@@ -34,3 +34,13 @@
         © 2025 Sunrise Therapeutic Riding & Learning Centre Inc. Registered Charity: # 11920 6027 RR0001</p>
     </div>
 </footer>
+<script>
+    // Load the footer content from footer.html
+    fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+
+</script>
