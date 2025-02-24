@@ -35,13 +35,17 @@ body {
 }
 
 .contact-info a {
-    margin-left: 5px;
+    margin-left: 10px;
     color: white;
     text-decoration: underline;
 }
 
+.contact-info span {
+    margin-right: 15px; /* Add margin to the right of the phone number */
+}
 
 .donate-button {
+    margin-left: 20px; /* Add margin to the left of the donate button */
     background-color: #ffcc00;
     color: black;
     border: none;
