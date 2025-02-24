@@ -74,17 +74,11 @@
     </div>
 </header>
 <script>
-    // Load the header content from header.html
-    fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-            generateBreadcrumb();
-        })
-        .catch(error => console.error('Error loading header:', error));
 
+ 
     
     // Generate breadcrumb trail
+
     function generateBreadcrumb() {
         const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
         const path = window.location.pathname.split('/').filter(part => part);
@@ -103,4 +97,16 @@
         breadcrumbHtml += '</nav>';
         breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
     }
+
+
+       // Load the header content from header.html
+
+       fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+            generateBreadcrumb();
+        })
+        .catch(error => console.error('Error loading header:', error));
+
 </script>
