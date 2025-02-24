@@ -90,6 +90,56 @@
     <!-- Include the footer -->
     <div id="footer-placeholder"></div>
 
+
+    <!-- JavaScript to load the header and footer content -->
+
+    <script>
+
+ 
     
+        // Generate breadcrumb trail
+    
+        function generateBreadcrumb() {
+            const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
+            const path = window.location.pathname.split('/').filter(part => part);
+            let breadcrumbHtml = '<nav class="breadcrumb"><a href="index.html">Home</a>';
+            let currentPath = '';
+    
+            path.forEach((part, index) => {
+                currentPath += '/' + part;
+                if (index < path.length - 1) {
+                    breadcrumbHtml += ` > <a href="${currentPath}">${part.replace('.html', '').replace(/-/g, ' ')}</a>`;
+                } else {
+                    breadcrumbHtml += ` > ${part.replace('.html', '').replace(/-/g, ' ')}`;
+                }
+            });
+    
+            breadcrumbHtml += '</nav>';
+            breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
+        }
+    
+    
+        // Load the header content from header.html
+    
+           fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                generateBreadcrumb();
+            })
+            .catch(error => console.error('Error loading header:', error));
+    
+    
+        // Load the footer content from footer.html
+
+            fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    
+    
+    </script>   
 </body>
 </html>
