@@ -283,9 +283,11 @@ nav ul li .submenu li a:hover {
 
 
 .social-media {;
-    justify-content: right;
-    padding: 10px 0;
-    background-color: #1a69e0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Move social media links to the right */
+    padding: 10px 20px;
+    background-color: #1a69e0; /* Adjust the background color as needed */
 }
 
 main {
@@ -301,7 +303,7 @@ main {
 } 
 
 .social-media a {
-    margin: 0 10px;
+    margin-left: 10px; /* Add margin to the left of each social media link */
 }
 
 .social-media img {
