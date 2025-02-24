@@ -26,15 +26,16 @@ body {
 }
 
 .contact-info {
+    margin-left: 20px; /* Add margin to the left of the contact info */
+    display: flex;
+    align-items: center;
     text-align: right;
     color: white;
     margin-right: 1in;
-    margin-bottom: 0; /* Remove bottom margin */
-    padding-bottom: 0; /* Remove bottom padding */
-    padding-right: 10px
 }
 
 .contact-info a {
+    margin-left: 5px;
     color: white;
     text-decoration: underline;
 }
