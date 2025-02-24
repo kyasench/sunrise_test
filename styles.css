@@ -26,12 +26,16 @@ body {
 }
 
 .contact-info {
-    margin-left: 20px; /* Add margin to the left of the contact info */
+    margin-left: auto; /* Align to the right */
     display: flex;
     align-items: center;
     text-align: right;
     color: white;
-    margin-right: 1in;
+    margin-right: 20px; /* Add margin to the right of the contact info */
+}
+
+.contact-info span {
+    margin-right: 10px; /* Add margin to the right of the phone number */
 }
 
 .contact-info a {
@@ -40,19 +44,16 @@ body {
     text-decoration: underline;
 }
 
-.contact-info span {
-    margin-right: 15px; /* Add margin to the right of the phone number */
-}
+
 
 .donate-button {
     margin-left: 20px; /* Add margin to the left of the donate button */
+    padding: 10px 20px;
     background-color: #ffcc00;
     color: black;
     border: none;
-    padding: 10px 0px;
-    cursor: pointer;
     border-radius: 5px;
-    margin-top: 5px;
+    cursor: pointer;
 }
 
 .donate-button:hover {
