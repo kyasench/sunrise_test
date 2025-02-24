@@ -1,11 +1,26 @@
 
 /*HEADER: SOCIAL MEDIA LINKS within the header...*/
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align content to the top */
+    background-color: #1a69e0; /* Adjust the background color as needed */
+}
+.left-content {
+    /* Styles for the left content */
+}
+.right-content {
+    /* Styles for the right content */
+
+
+
+
 .social-media {
     
-    justify-content: left; /* Move social media links to the right */
+    
     padding: 10px 20px;
-    background-color: #1a69e0; /* Adjust the background color as needed */
+    
     padding-right: 1in; /* Add padding to the right */
     padding-left: 60px;
 }
