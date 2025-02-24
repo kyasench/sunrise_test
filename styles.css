@@ -72,11 +72,11 @@ header {
 .logo-title {
     display: flex;
     align-items: center;
-    margin-top: 60px; /* Add margin to move the logo down */
+    margin-top: 10px; /* Add margin to move the logo down or up */
 }
 
 .logo {
-    height: 75px; /* Adjust the logo size as needed */
+    height: 100px; /* Adjust the logo size as needed */
 }
 
 .page-title {
@@ -286,7 +286,6 @@ nav ul li .submenu li a:hover {
     justify-content: right;
     padding: 10px 0;
     background-color: #1a69e0;
-    text-indent: 1in;
 }
 
 main {
