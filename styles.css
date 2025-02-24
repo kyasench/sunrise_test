@@ -7,7 +7,7 @@
     justify-content: flex-end; /* Move social media links to the right */
     padding: 60px 20px;
     background-color: #1a69e0; /* Adjust the background color as needed */
-    padding-right: 0px; /* Add padding to the right */
+    padding-right: 1in; /* Add padding to the right */
     padding-left: 60px;
 }
 
