@@ -283,7 +283,7 @@ nav ul li .submenu li a:hover {
 
 
 .social-media {;
-    justify-content: left;
+    justify-content: right;
     padding: 10px 0;
     background-color: #1a69e0;
     text-indent: 1in;
