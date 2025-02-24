@@ -2,10 +2,9 @@
 /*HEADER: SOCIAL MEDIA LINKS within the header...*/
 
 .social-media {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Move social media links to the right */
-    padding: 20px 20px;
+    
+    justify-content: left; /* Move social media links to the right */
+    padding: 10px 20px;
     background-color: #1a69e0; /* Adjust the background color as needed */
     padding-right: 1in; /* Add padding to the right */
     padding-left: 60px;
