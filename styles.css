@@ -16,14 +16,13 @@
 
 
 
-.social-media {
-    
-    
-    padding: 10px 20px;
-    
-    padding-right: 1in; /* Add padding to the right */
-    padding-left: 60px;
+.social-media {;
+    justify-content: left;
+    padding: 10px 0;
+    background-color: #1a69e0;
+    text-indent: 1in;
 }
+    
 
 .social-media a {
     margin-left: 10px; /* Add margin to the left of each social media link */
