@@ -31,6 +31,7 @@ body {
     margin-right: 1in;
     margin-bottom: 0; /* Remove bottom margin */
     padding-bottom: 0; /* Remove bottom padding */
+    padding-right: 10px
 }
 
 .contact-info a {
@@ -288,6 +289,7 @@ nav ul li .submenu li a:hover {
     justify-content: flex-end; /* Move social media links to the right */
     padding: 10px 20px;
     background-color: #1a69e0; /* Adjust the background color as needed */
+    padding-right: 10px;
 }
 
 main {
