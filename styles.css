@@ -29,12 +29,10 @@
 /*HEADER: CONTACT information within the header...*/
 
 .contact-info {
-    margin-left: auto; /* Align to the right */
-    display: flex;
-    align-items: center;
-    text-align: right;
-    color: white;
-    margin-right: 20px; /* Add margin to the right of the contact info */
+    justify-content: right; 
+    padding: 10px 20px;
+    background-color: #1a69e0; /* Adjust the background color as needed */
+    padding-right: 1in;
 }
 
 .contact-info span {
@@ -51,8 +49,7 @@
 /*HEADER: Used to format the DONATE BUTTON within the header...*/
 
 .donate-button {
-    margin-left: 20px; /* Add margin to the left of the donate button */
-    padding: 10px 20px;
+    
     background-color: #ffcc00;
     color: black;
     border: none;
