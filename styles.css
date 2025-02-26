@@ -52,7 +52,7 @@ header {
 .logo-title {
     display: flex;
     align-items: center;
-    margin-top: -40px; /* Move the logo up */
+    margin-top: -20px; /* Move the logo up */
 }
 
 .logo {
