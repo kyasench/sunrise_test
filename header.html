@@ -80,7 +80,7 @@
         let breadcrumbHtml = '<nav class="breadcrumb"><a href="index.html">Home</a>';
         let currentPath = '';
 
-        if (path.length === 0 || (path.length === 1 && path[0] === 'index.html')) {
+        if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
             breadcrumbHtml += ' > Home';
         } else {
             path.forEach((part, index) => {
