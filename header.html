@@ -80,14 +80,18 @@
         let breadcrumbHtml = '<nav class="breadcrumb"><a href="index.html">Home</a>';
         let currentPath = '';
 
-        path.forEach((part, index) => {
-            currentPath += '/' + part;
-            if (index < path.length - 1) {
-                breadcrumbHtml += ` > <a href="${currentPath}">${part.replace('.html', '').replace(/-/g, ' ')}</a>`;
-            } else {
-                breadcrumbHtml += ` > ${part.replace('.html', '').replace(/-/g, ' ')}`;
-            }
-        });
+        if (path.length === 0 || (path.length === 1 && path[0] === 'index.html')) {
+            breadcrumbHtml += ' > Home';
+        } else {
+            path.forEach((part, index) => {
+                currentPath += '/' + part;
+                if (index < path.length - 1) {
+                    breadcrumbHtml += ` > <a href="${currentPath}">${part.replace('.html', '').replace(/-/g, ' ')}</a>`;
+                } else {
+                    breadcrumbHtml += ` > ${part.replace('.html', '').replace(/-/g, ' ')}`;
+                }
+            });
+        }
 
         breadcrumbHtml += '</nav>';
         breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
