@@ -5,7 +5,7 @@ body {
 }
 
 .breadcrumb-style {
-    margin-left: 10px; /* Adjust this value to move the breadcrumb closer to the logo */
+    margin-left: 0px; /* Adjust this value to move the breadcrumb closer to the logo */
     color: #ffffff;
 }
 
