@@ -6,13 +6,10 @@
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-        
-  
-  <!-- Include the header -->
- <div id="header-placeholder"></div>
+    <!-- Include the header -->
+    <div id="header-placeholder"></div>
   
     <main class="bottom-padding">
         <center>
@@ -88,34 +85,30 @@
         </div>
     </div>
 
-    <!-- Main content goes htestere -->
+    <!-- Main content goes here -->
     </main>
 
- <!-- Include the footer -->
- <div id="footer-placeholder"></div>
+    <!-- Include the footer -->
+    <div id="footer-placeholder"></div>
 
- <script>
-    
-      // Load the header content from header.html
-    
-      fetch("header.html")
+    <script>
+        // Load the header content from header.html
+        fetch("header.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
+                // Call the function to generate the breadcrumb after the header is loaded
                 generateBreadcrumb();
             })
             .catch(error => console.error('Error loading header:', error));
 
-    
-    
-    // Load the footer content from footer.html
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading footer:', error));
-</script>
-
+        // Load the footer content from footer.html
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
 </body>
 </html>
