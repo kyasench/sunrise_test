@@ -64,7 +64,7 @@ header {
 .logo {
     width: 140px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
-    margin-right: -30px; /* Add space between the logo and the text */
+    margin-right: 0px; /* Add space between the logo and the text */
 }
 
 .page-title {
