@@ -4,6 +4,12 @@ body {
     padding: 0;
 }
 
+.breadcrumb-style {
+    margin-left: 20px; /* Adjust this value to move the breadcrumb closer to the logo */
+    color: #ffffff;
+}
+
+
 .contact-info {
     text-align: right;
     color: white;
