@@ -26,6 +26,7 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
+                // Call the function to generate the breadcrumb after the header is loaded
                 generateBreadcrumb();
             })
             .catch(error => console.error('Error loading header:', error));

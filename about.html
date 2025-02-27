@@ -49,12 +49,13 @@
 
  <script>
     
-      // Load the header content from header.html
     
+      // Load the header content from header.html
       fetch("header.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
+                // Call the function to generate the breadcrumb after the header is loaded
                 generateBreadcrumb();
             })
             .catch(error => console.error('Error loading header:', error));
