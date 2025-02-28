@@ -110,8 +110,8 @@
             })
             .catch(error => console.error('Error loading footer:', error));
     
-    // Generate breadcrumb trail
-    function generateBreadcrumb() {
+// Generate breadcrumb trail
+function generateBreadcrumb() {
         const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
         const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
         let breadcrumbHtml = '<nav class="breadcrumb"><a href="index.html">Home</a>';
@@ -155,7 +155,7 @@
             path.forEach((part, index) => {
                 currentPath += '/' + part;
                 const breadcrumbInfo = breadcrumbMapping[part] || { name: part.replace('.html', '').replace(/-/g, ' '), parent: parent };
-                if (breadcrumbInfo.parent) {
+                if (breadcrumbInfo.parent && breadcrumbInfo.parent !== 'index.html') {
                     const parentInfo = breadcrumbMapping[breadcrumbInfo.parent];
                     if (parentInfo) {
                         breadcrumbHtml += ` > <a href="${currentPath.replace(part, breadcrumbInfo.parent)}">${parentInfo.name}</a>`;
@@ -171,7 +171,7 @@
     }
 
     // Call the function to generate the breadcrumb after the header is loaded
-    document.addEventListener('DOMContentLoaded', generateBreadcrumb);           
+    document.addEventListener('DOMContentLoaded', generateBreadcrumb);          
  
 </script>
 
