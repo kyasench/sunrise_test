@@ -4,10 +4,6 @@ body {
     padding: 0;
 }
 
-.breadcrumb-style {
-    margin-left: 0px; /* Adjust this value to move the breadcrumb closer to the logo */
-    color: #ffffff;
-}
 
 
 .contact-info {
@@ -47,18 +43,22 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-left: 1in;
     margin-right: 1in;
     padding-top: 20px; /* Add top padding */
     padding-bottom: 10px; /* Add bottom padding */
 }
 
-
 .logo-title {
     display: flex;
     align-items: center;
     margin-top: -50px; /* Move the logo up */
+}
+
+.breadcrumb-style {
+    margin-left: 0px; /* Adjust this value to move the breadcrumb closer to the logo */
+    color: #ffffff;
+    flex-grow: 1; /* Allow the breadcrumb to take up available space */
 }
 
 .logo {
