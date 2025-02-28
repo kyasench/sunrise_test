@@ -56,7 +56,7 @@ header {
 }
 
 .breadcrumb-style {
-    margin-left: 0px; /* Adjust this value to move the breadcrumb closer to the logo */
+    margin-left: 10px; /* Adjust this value to move the breadcrumb closer to the logo */
     color: #ffffff;
     flex-grow: 1; /* Allow the breadcrumb to take up available space */
 }
