@@ -57,12 +57,12 @@ header {
 
 .breadcrumb-style {
     margin-left: 10px; /* Adjust this value to move the breadcrumb closer to the logo */
-    color: #ff9900; /* Change breadcrumb text color to orange */
+    color: #E7BD41; /* Change breadcrumb text color to orange */
     flex-grow: 1; /* Allow the breadcrumb to take up available space */
 }
 
 .breadcrumb-style a {
-    color: #ff9900; /* Change breadcrumb link color to orange */
+    color: #E7BD41; /* Change breadcrumb link color to orange */
     text-decoration: none;
 }
 
