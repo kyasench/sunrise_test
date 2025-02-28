@@ -40,15 +40,16 @@
             .catch(error => console.error('Error loading footer:', error));
 
         
-    // Generate breadcrumb trail
-    function generateBreadcrumb() {
+  // Generate breadcrumb trail
+  function generateBreadcrumb() {
         const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
-        const path = window.location.pathname.split('/').filter(part => part);
+        const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
         let breadcrumbHtml = '<nav class="breadcrumb"><a href="index.html">Home</a>';
         let currentPath = '';
 
         // Mapping of URLs to breadcrumb names and their hierarchy
         const breadcrumbMapping = {
+            'index.html': { name: 'Home', parent: '' },
             'about.html': { name: 'About Us', parent: 'index.html' },
             'history.html': { name: 'History', parent: 'about.html' },
             'team.html': { name: 'Our Team', parent: 'about.html' },
@@ -92,6 +93,8 @@
         breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
     }
 
+    // Call the function to generate the breadcrumb after the header is loaded
+    document.addEventListener('DOMContentLoaded', generateBreadcrumb);
 
     </script>
 </body>
