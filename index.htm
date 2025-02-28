@@ -110,9 +110,8 @@
             })
             .catch(error => console.error('Error loading footer:', error));
     
-            
-   // Generate breadcrumb trail
-   function generateBreadcrumb() {
+    // Generate breadcrumb trail
+    function generateBreadcrumb() {
         const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
         const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
         let breadcrumbHtml = '<nav class="breadcrumb"><a href="index.html">Home</a>';
@@ -149,7 +148,8 @@
         };
 
         if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
-            breadcrumbHtml += ' > Home';
+            // Only display "Home" without the carat and additional "Home"
+            breadcrumbHtml = '<nav class="breadcrumb"><a href="index.html">Home</a>';
         } else {
             let parent = 'index.html';
             path.forEach((part, index) => {
@@ -171,7 +171,8 @@
     }
 
     // Call the function to generate the breadcrumb after the header is loaded
-    document.addEventListener('DOMContentLoaded', generateBreadcrumb);
+    document.addEventListener('DOMContentLoaded', generateBreadcrumb);           
+ 
 </script>
 
 

@@ -78,7 +78,8 @@
         };
 
         if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
-            breadcrumbHtml += ' > Home';
+            // Only display "Home" without the carat and additional "Home"
+            breadcrumbHtml = '<nav class="breadcrumb"><a href="index.html">Home</a>';
         } else {
             let parent = 'index.html';
             path.forEach((part, index) => {
