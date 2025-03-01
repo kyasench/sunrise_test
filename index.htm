@@ -110,68 +110,68 @@
             })
             .catch(error => console.error('Error loading footer:', error));
     
-    // Generate breadcrumb trail
-    function generateBreadcrumb() {
-        const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
-        const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
-        let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
-        let currentPath = '/sunrise_test';
+       // Generate breadcrumb trail
+       function generateBreadcrumb() {
+            const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
+            const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
+            let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+            let currentPath = '/sunrise_test';
 
-        // Mapping of URLs to breadcrumb names and their hierarchy
-        const breadcrumbMapping = {
-            'index.html': { name: 'Home', parent: '' },
-            'about.html': { name: 'About Us', parent: 'index.html' },
-            'history.html': { name: 'History', parent: 'about.html' },
-            'team.html': { name: 'Our Team', parent: 'about.html' },
-            'mission.html': { name: 'Mission', parent: 'about.html' },
-            'vision.html': { name: 'Vision', parent: 'about.html' },
-            'values.html': { name: 'Values', parent: 'about.html' },
-            'programs.html': { name: 'Programs', parent: 'index.html' },
-            'program1.html': { name: 'Program 1', parent: 'programs.html' },
-            'program2.html': { name: 'Program 2', parent: 'programs.html' },
-            'program3.html': { name: 'Program 3', parent: 'programs.html' },
-            'program4.html': { name: 'Program 4', parent: 'programs.html' },
-            'program5.html': { name: 'Program 5', parent: 'programs.html' },
-            'program6.html': { name: 'Program 6', parent: 'programs.html' },
-            'volunteer.html': { name: 'Volunteer', parent: 'index.html' },
-            'support.html': { name: 'Support Us', parent: 'index.html' },
-            'donate.html': { name: 'Donate', parent: 'support.html' },
-            'sponsor.html': { name: 'Sponsor', parent: 'support.html' },
-            'fundraise.html': { name: 'Fundraise', parent: 'support.html' },
-            'partnerships.html': { name: 'Partnerships', parent: 'support.html' },
-            'volunteer-support.html': { name: 'Volunteer Support', parent: 'support.html' },
-            'whatshappening.html': { name: "What's Happening", parent: 'index.html' },
-            'events.html': { name: 'Events', parent: 'whatshappening.html' },
-            'news.html': { name: 'News', parent: 'whatshappening.html' },
-            'updates.html': { name: 'Updates', parent: 'whatshappening.html' },
-            'contact.html': { name: 'Contact Us', parent: 'index.html' }
-        };
+            // Mapping of URLs to breadcrumb names and their hierarchy
+            const breadcrumbMapping = {
+                'index.html': { name: 'Home', parent: '' },
+                'about.html': { name: 'About Us', parent: 'index.html' },
+                'history.html': { name: 'History', parent: 'about.html' },
+                'team.html': { name: 'Our Team', parent: 'about.html' },
+                'mission.html': { name: 'Mission', parent: 'about.html' },
+                'vision.html': { name: 'Vision', parent: 'about.html' },
+                'values.html': { name: 'Values', parent: 'about.html' },
+                'programs.html': { name: 'Programs', parent: 'index.html' },
+                'program1.html': { name: 'Program 1', parent: 'programs.html' },
+                'program2.html': { name: 'Program 2', parent: 'programs.html' },
+                'program3.html': { name: 'Program 3', parent: 'programs.html' },
+                'program4.html': { name: 'Program 4', parent: 'programs.html' },
+                'program5.html': { name: 'Program 5', parent: 'programs.html' },
+                'program6.html': { name: 'Program 6', parent: 'programs.html' },
+                'volunteer.html': { name: 'Volunteer', parent: 'index.html' },
+                'support.html': { name: 'Support Us', parent: 'index.html' },
+                'donate.html': { name: 'Donate', parent: 'support.html' },
+                'sponsor.html': { name: 'Sponsor', parent: 'support.html' },
+                'fundraise.html': { name: 'Fundraise', parent: 'support.html' },
+                'partnerships.html': { name: 'Partnerships', parent: 'support.html' },
+                'volunteer-support.html': { name: 'Volunteer Support', parent: 'support.html' },
+                'whatshappening.html': { name: "What's Happening", parent: 'index.html' },
+                'events.html': { name: 'Events', parent: 'whatshappening.html' },
+                'news.html': { name: 'News', parent: 'whatshappening.html' },
+                'updates.html': { name: 'Updates', parent: 'whatshappening.html' },
+                'contact.html': { name: 'Contact Us', parent: 'index.html' }
+            };
 
-        if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
-            // Only display "Home" without the carat and additional "Home"
-            breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
-        } else {
-            let parent = 'index.html';
-            path.forEach((part, index) => {
-                currentPath += '/' + part;
-                const breadcrumbInfo = breadcrumbMapping[part] || { name: part.replace('.html', '').replace(/-/g, ' '), parent: parent };
-                if (breadcrumbInfo.parent && breadcrumbInfo.parent !== 'index.html') {
-                    const parentInfo = breadcrumbMapping[breadcrumbInfo.parent];
-                    if (parentInfo) {
-                        breadcrumbHtml += ` > <a href="/sunrise_test/${breadcrumbInfo.parent}">${parentInfo.name}</a>`;
+            if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
+                // Only display "Home" without the carat and additional "Home"
+                breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+            } else {
+                let parent = 'index.html';
+                path.forEach((part, index) => {
+                    currentPath += '/' + part;
+                    const breadcrumbInfo = breadcrumbMapping[part] || { name: part.replace('.html', '').replace(/-/g, ' '), parent: parent };
+                    if (breadcrumbInfo.parent && breadcrumbInfo.parent !== 'index.html') {
+                        const parentInfo = breadcrumbMapping[breadcrumbInfo.parent];
+                        if (parentInfo) {
+                            breadcrumbHtml += ` > <a href="/sunrise_test/${breadcrumbInfo.parent}">${parentInfo.name}</a>`;
+                        }
                     }
-                }
-                breadcrumbHtml += ` > <a href="${currentPath}">${breadcrumbInfo.name}</a>`;
-                parent = part;
-            });
+                    breadcrumbHtml += ` > <a href="${currentPath}">${breadcrumbInfo.name}</a>`;
+                    parent = part;
+                });
+            }
+
+            breadcrumbHtml += '</nav>';
+            breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
         }
 
-        breadcrumbHtml += '</nav>';
-        breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
-    }
-
-    // Call the function to generate the breadcrumb after the header is loaded
-    document.addEventListener('DOMContentLoaded', generateBreadcrumb);
+        // Call the function to generate the breadcrumb after the header is loaded
+        document.addEventListener('DOMContentLoaded', generateBreadcrumb);
  
 </script>
 
