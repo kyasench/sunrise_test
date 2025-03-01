@@ -318,6 +318,46 @@ main {
 
 
 
+/* Styles for two column layout like on the About Us page*/
+
+.two-column-container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.left-column {
+    padding-right: 2rem;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.member-list {
+    columns: 2;
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+.objectives-list {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+.section-heading {
+    margin: 2rem 0 1rem 0;
+}
+
+.mission-text {
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+
 
 /* Styles for smaller screens (tablets, mobile devices) */
 @media (max-width: 768px) {
