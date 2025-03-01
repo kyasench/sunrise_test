@@ -71,8 +71,8 @@
         .catch(error => console.error('Error loading footer:', error));
 
 
-       // Generate breadcrumb trail
-       function generateBreadcrumb() {
+        // Generate breadcrumb trail
+        function generateBreadcrumb() {
             const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
             const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
             let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
