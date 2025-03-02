@@ -76,14 +76,14 @@ header {
 
 .breadcrumb-style {
     margin: 0; /*  */
-    color: #E7BD41; /* Change breadcrumb text color to orange */
+    color: #ffff; /* Change breadcrumb text color to white */
     flex-grow: 1; /* Allow the breadcrumb to take up available space */
     font-weight: bold; /* Make the breadcrumb text bold */
     font-size: 1.2rem; /* Increase the font size */
 }
 
 .breadcrumb-style a {
-    color: #E7BD41; /* Change breadcrumb link color to orange */
+    color: #ffff; /* Change breadcrumb link color to white */
     text-decoration: none;
     font-weight: bold; /* Make the breadcrumb link text bold */
     font-size: 1.2rem; /* Increase the font size */
