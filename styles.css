@@ -319,7 +319,7 @@ main {
 .menu {
     margin-right: 0in;
     padding-top: 0in;
-    margin-top: 20px;
+    margin-top: -20px;
 } 
 
 .social-media a {
