@@ -68,6 +68,7 @@ header {
     flex-direction: column;
     gap: 10px;
     margin-left: 10px;
+    margin-top: -20px; /* Move the breadcrumb up */
 }
 
 
@@ -316,6 +317,7 @@ main {
 .menu {
     margin-right: 0in;
     padding-top: 0in;
+    margin-top: 10px;
 } 
 
 .social-media a {
