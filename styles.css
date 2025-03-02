@@ -60,11 +60,19 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     font-family: serif;
-    margin-left: 10px; /* Add space between logo and organization name */
+    margin: 0; /*  */
 }
 
+.title-breadcrumb-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+
 .breadcrumb-style {
-    margin-left: 10px; /* Adjust this value to move the breadcrumb closer to the logo */
+    margin: 0; /*  */
     color: #E7BD41; /* Change breadcrumb text color to orange */
     flex-grow: 1; /* Allow the breadcrumb to take up available space */
     font-weight: bold; /* Make the breadcrumb text bold */
