@@ -59,7 +59,7 @@ header {
     color: white;
     font-size: 2rem;
     font-weight: bold;
-    font-family: "Bodoni MT", "Georgia", "Times New Roman", serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     font-variant: small-caps;
     letter-spacing: 1px;  /* Add spacing between letters for better readability */
