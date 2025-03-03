@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History</title>
+    <title>Lifeskills Day Program - Sunrise Therapeutic Riding & Learning Centre</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Include the header -->
-    
     <header><div id="header-placeholder"></div></header>
 
     <main class="bottom-padding">
-        <!-- Main content goes here -->
+        <!-- Main content will go here -->
     </main>
 
     <!-- Include the footer -->
-    
     <footer><div id="footer-placeholder"></div></footer>
 
     <script>
@@ -41,13 +39,6 @@
 
         // Generate breadcrumb trail
         function generateBreadcrumb() {
-            const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
-            const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
-            let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
-            let currentPath = '/sunrise_test';
-
-       // Generate breadcrumb trail
-       function generateBreadcrumb() {
             const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
             const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
             let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
@@ -84,7 +75,6 @@
             };
 
             if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
-                // Only display "Home" without the carat and additional "Home"
                 breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
             } else {
                 let parent = 'index.html';
@@ -108,7 +98,6 @@
 
         // Call the function to generate the breadcrumb after the header is loaded
         document.addEventListener('DOMContentLoaded', generateBreadcrumb);
-
     </script>
 </body>
 </html>
