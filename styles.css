@@ -257,7 +257,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 0.3rem 0.5rem 1rem 0.5rem; /* Adjusted padding */
+    padding: 0.3rem 0.5rem 0.5rem 0.5rem; /* Adjusted padding */
     font-size: 0.9rem; /* Adjusted font size */
     white-space: nowrap; /* Prevent line break */
 }
@@ -265,6 +265,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #555;
     border-radius: 5px;
+    padding-bottom: 0.5rem;
 }
 
 
