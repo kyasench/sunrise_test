@@ -105,11 +105,26 @@ header {
     margin: 0;
 }
 
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem; /* Adjust the size as needed */
+    color: black;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem; /* Adjust the size as needed */
+    color: black;
+}
+
+
 .text-very-large {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem; /* Adjust the size as needed */
     color: black;
 }
+
+
 
 .text-large {
     font-family: 'Montserrat', sans-serif;
