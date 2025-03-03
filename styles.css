@@ -106,14 +106,13 @@ header {
 }
 
 
-
+/* text styles */
 
 .text-very-large {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.75rem; /* Adjust the size as needed */
     color: black;
 }
-
 
 
 .text-large {
@@ -243,8 +242,21 @@ header {
 }
 
 
+/* Styles for the right column with small thumbnails eg on About.html page */
+
+.right-column.small-thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.right-column .thumbnail {
+    margin: 0;
+}
 
 
+/* menu styles */
 nav ul {
     list-style-type: none;
     margin: 0;
