@@ -79,14 +79,14 @@ header {
     color: #ffff; /* Change breadcrumb text color to white */
     flex-grow: 1; /* Allow the breadcrumb to take up available space */
     font-weight: bold; /* Make the breadcrumb text bold */
-    font-size: 1.2rem; /* Increase the font size */
+    font-size: 1.0rem; /*  */
 }
 
 .breadcrumb-style a {
     color: #ffff; /* Change breadcrumb link color to white */
     text-decoration: none;
     font-weight: bold; /* Make the breadcrumb link text bold */
-    font-size: 1.2rem; /* Increase the font size */
+    font-size: 1.0rem; /*  */
 }
 
 .breadcrumb-style a:hover {
@@ -257,7 +257,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 0.3rem 0.5rem; /* Adjusted padding */
+    padding: 0.3rem 0.5rem 1rem 0.5rem; /* Adjusted padding */
     font-size: 0.9rem; /* Adjusted font size */
     white-space: nowrap; /* Prevent line break */
 }
@@ -271,7 +271,7 @@ nav ul li a:hover {
 nav ul li .submenu {
     display: none;
     position: absolute;
-    top: 140%;
+    top: 100%;
     left: 0;
     background-color: #1a69e0;
     padding: 0;
