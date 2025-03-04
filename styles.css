@@ -268,7 +268,7 @@ header {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 200px;      /* Match the container width */
+    width: 100px;      /* Match the container width */
     background-color: rgba(26, 82, 167, 0.521);
     color: white;
     padding: 10px;
