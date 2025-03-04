@@ -190,11 +190,7 @@ header {
     max-width: 400px; /* Adjust as needed */
 }
 
-.thumbnail-wrapper a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
+
 
 .thumbnail-button {
     position: absolute;
@@ -275,7 +271,12 @@ header {
     text-align: center;
 }
 
-
+/* Add specific overrides for right column if needed */
+.right-column .thumbnail-wrapper {
+    max-width: none;  /* Override the max-width for right column */
+    width: 400px;     /* Set fixed width for right column thumbnails */
+    margin: 0;
+}
 
 /* menu styles */
 nav ul {
