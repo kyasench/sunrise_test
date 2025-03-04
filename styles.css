@@ -249,19 +249,30 @@ header {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    width: 400px
+    width: 400px;  /* Set a fixed width for the container */
 }
 
 .right-column .thumbnail {
+    position: relative;  /* Add this for proper button positioning */
+    width: 400px;       /* Match the container width */
     margin: 0;
-    width: 100%;    /* Make thumbnail fill the container width */
-    height: auto;   /* Maintain aspect ratio */
 }
 
 .right-column .thumbnail img {
-    width: 100%;    /* Make image fill the thumbnail container */
-    height: auto;   /* Maintain aspect ratio */
-    object-fit: cover;  /* Ensure image covers the area without distortion */
+    width: 400px;       /* Match the container width */
+    height: 300px;      /* Set a fixed height */
+    object-fit: cover;  /* Maintain aspect ratio while covering area */
+}
+
+.right-column .thumbnail-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;      /* Match the container width */
+    background-color: rgba(26, 82, 167, 0.521);
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
 
