@@ -273,8 +273,8 @@ header {
 
 /* Add specific overrides for right column if needed */
 .right-column .thumbnail-wrapper {
-    max-width: 400px;  /* Override the max-width for right column */
-    width: 400px;     /* Set fixed width for right column thumbnails */
+    max-width: 300px;  /* Override the max-width for right column */
+    width: 300px;     /* Set fixed width for right column thumbnails */
     margin: 0;
 }
 
