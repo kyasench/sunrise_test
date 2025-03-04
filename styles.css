@@ -269,7 +269,19 @@ header {
     color: white;
     padding: 10px;
     text-align: center;
+    transition: background-color 0.3s, transform 0.3s;  /* Add transition */
 }
+
+.right-column .thumbnail-label:hover {
+    background-color: rgba(73, 116, 180, 0.521);
+    transform: scale(1.05);
+}
+
+.right-column .thumbnail-label:active {
+    background-color: rgba(26, 82, 167, 0.521);
+    transform: scale(1);
+}
+
 
 /* Add specific overrides for right column if needed */
 .right-column .thumbnail-wrapper {
