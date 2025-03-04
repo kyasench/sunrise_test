@@ -269,7 +269,8 @@ header {
     color: white;
     padding: 10px;
     text-align: center;
-    transition: background-color 0.3s, transform 0.3s;  /* Add transition */
+    transition: background-color 0.3s, transform 0.3s;
+    border: none  /* Add transition */
 }
 
 .right-column .thumbnail-label:hover {
