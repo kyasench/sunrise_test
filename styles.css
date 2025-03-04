@@ -134,6 +134,20 @@ header {
     color: black;
 }
 
+.bulleted-list {
+    list-style-type: disc;    /* Creates bullet points */
+    margin-left: 2rem;        /* Indents the list */
+}
+
+
+
+.section-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem; /* Adjust the size as needed */
+    color: black;
+    margin: 20px 0;
+}
+
 .flex-container {
     display: flex;
     justify-content: space-between;
