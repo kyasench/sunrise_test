@@ -117,20 +117,20 @@ header {
 
 .text-large {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem; /* Adjust the size as needed */
+    font-size: 1.75rem; /* Adjust the size as needed */
     color: black;
 }
 
 .text-medium {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem; /* Adjust the size as needed */
+    font-size: 1.25rem; /* Adjust the size as needed */
     color: black;
 }
 
 
 .text-medium-small {
     font-family: 'Montserrat', sans-serif;
-    font-size: .75rem; /* Adjust the size as needed */
+    font-size: 1rem; /* Adjust the size as needed */
     color: black;
 }
 
@@ -249,11 +249,21 @@ header {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    width: 400px
 }
 
 .right-column .thumbnail {
     margin: 0;
+    width: 100%;    /* Make thumbnail fill the container width */
+    height: auto;   /* Maintain aspect ratio */
 }
+
+.right-column .thumbnail img {
+    width: 100%;    /* Make image fill the thumbnail container */
+    height: auto;   /* Maintain aspect ratio */
+    object-fit: cover;  /* Ensure image covers the area without distortion */
+}
+
 
 
 /* menu styles */
