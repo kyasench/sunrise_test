@@ -110,27 +110,27 @@ header {
 
 .text-very-large {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.75rem; /* Adjust the size as needed */
+    font-size: 2rem; /* Adjust the size as needed */
     color: black;
 }
 
 
 .text-large {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem; /* Adjust the size as needed */
+    font-size: 1.5rem; /* Adjust the size as needed */
     color: black;
 }
 
 .text-medium {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem; /* Adjust the size as needed */
+    font-size: 1rem; /* Adjust the size as needed */
     color: black;
 }
 
 
 .text-medium-small {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem; /* Adjust the size as needed */
+    font-size: .75rem; /* Adjust the size as needed */
     color: black;
 }
 
@@ -360,7 +360,7 @@ main {
 
 .two-column-container {
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 70% 30%;
     gap: 2rem;
     padding: 2rem;
 }
