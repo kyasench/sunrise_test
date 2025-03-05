@@ -445,6 +445,21 @@ main {
 }
 
 
+/* Styles for the board members table on the Governance and Accountability page */
+
+.board-members {
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.board-members td {
+    padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.board-members .role {
+    font-weight: bold;
+    min-width: 150px;
+}
 
 /* Styles for smaller screens (tablets, mobile devices) */
 @media (max-width: 768px) {
