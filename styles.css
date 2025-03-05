@@ -461,6 +461,33 @@ main {
     min-width: 150px;
 }
 
+
+
+/* Styles for the Staff page*/
+.staff-section {
+    margin-bottom: 2rem;
+}
+
+.staff-info {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: black;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.staff-info a {
+    color: #1a69e0;
+    text-decoration: none;
+}
+
+.staff-info a:hover {
+    text-decoration: underline;
+}
+
+
+
+
 /* Styles for smaller screens (tablets, mobile devices) */
 @media (max-width: 768px) {
     nav ul li {
