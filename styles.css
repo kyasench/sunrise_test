@@ -527,6 +527,69 @@ main {
     transform: scale(1.1);
 }
 
+/* Styles for the horses page */
+.horse-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.horse-card {
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.3s;
+    display: block;
+}
+
+.horse-card:hover {
+    transform: scale(1.05);
+}
+
+.horse-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.horse-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 82, 167, 0.8);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Make grid responsive */
+@media (max-width: 1024px) {
+    .horse-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .horse-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .horse-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
 
 
