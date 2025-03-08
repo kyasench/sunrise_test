@@ -3,106 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History</title>
+    <title>Lifeskills Day Program - Sunrise Therapeutic Riding & Learning Centre</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Include the header -->
-    
     <header><div id="header-placeholder"></div></header>
 
     <main class="bottom-padding">
-        <!-- Main content goes here -->
-        <p class="text-large">Meet Our Horses and their Little Friends</p>
-        
-        <div class="horse-grid">
-            <a href="horse-cadbury.html" class="horse-card">
-                <img src="graphics/horse-cadbury.jpg" alt="Cadbury">
-                <div class="horse-name">Cadbury</div>
-            </a>
-            <a href="horse-chance.html" class="horse-card">
-                <img src="graphics/horse-chance.jpg" alt="Chance">
-                <div class="horse-name">Chance</div>
-            </a>
-            <a href="horse-ella.html" class="horse-card">
-                <img src="graphics/horse-ella.jpg" alt="Ella">
-                <div class="horse-name">Ella</div>
-            </a>
-            <a href="horse-firefly.html" class="horse-card">
-                <img src="graphics/horse-firefly.jpg" alt="Firefly">
-                <div class="horse-name">Firefly</div>
-            </a>
-            <a href="horse-fantasy.html" class="horse-card">
-                <img src="graphics/horse-fantasy.jpg" alt="Fantasy">
-                <div class="horse-name">Fantasy</div>
-            </a>
-            <a href="horse-jack.html" class="horse-card">
-                <img src="graphics/horse-jack.jpg" alt="Jack">
-                <div class="horse-name">Jack</div>
-            </a>
-            <a href="horse-jackie.html" class="horse-card">
-                <img src="graphics/horse-jackie.jpg" alt="Jackie">
-                <div class="horse-name">Jackie</div>
-            </a>
-            <a href="horse-lena.html" class="horse-card">
-                <img src="graphics/horse-lena.jpg" alt="Lena">
-                <div class="horse-name">Lena</div>
-            </a>
-            <a href="horse-lily.html" class="horse-card">
-                <img src="graphics/horse-lily.jpg" alt="Lily">
-                <div class="horse-name">Lily</div>
-            </a>
-            <a href="horse-marley.html" class="horse-card">
-                <img src="graphics/horse-marley.jpg" alt="Marley">
-                <div class="horse-name">Marley</div>
-            </a>
-            <a href="horse-miami.html" class="horse-card">
-                <img src="graphics/horse-miami.jpg" alt="Miami">
-                <div class="horse-name">Miami</div>
-            </a>
-            <a href="horse-nos.html" class="horse-card">
-                <img src="graphics/horse-nos.jpg" alt="Nos">
-                <div class="horse-name">Nos</div>
-            </a>
-            <a href="horse-pevensie.html" class="horse-card">
-                <img src="graphics/horse-pevensie.jpg" alt="Pevensie">
-                <div class="horse-name">Nos</div>
-            </a>
-            <a href="horse-rolex.html" class="horse-card">
-                <img src="graphics/horse-rolex.jpg" alt="Rolex">
-                <div class="horse-name">Rolex</div>
-            </a>
-            <a href="horse-snoopy.html" class="horse-card">
-                <img src="graphics/horse-snoopy.jpg" alt="Snoopy">
-                <div class="horse-name">Snoopy</div>
-            </a>
-            <a href="horse-sparkle.html" class="horse-card">
-                <img src="graphics/horse-sparkle.jpg" alt="Sparkle">
-                <div class="horse-name">Sparkle</div>
-            </a>
-            <a href="horse-tucker.html" class="horse-card">
-                <img src="graphics/horse-tucker.jpg" alt="Tucker">
-                <div class="horse-name">Tucker</div>
-            </a>
-            <a href="horse-titan.html" class="horse-card">
-                <img src="graphics/horse-titan.jpg" alt="Titan">
-                <div class="horse-name">Titan</div>
-            </a>
-            <!-- Repeat for each horse -->
-            <a href="horse-minis.html" class="horse-card">
-                <img src="graphics/horse-minis.jpg" alt="Our Mini Horses">
-                <div class="horse-name">The Minis</div>
-            </a>
-            <a href="horse-cats.html" class="horse-card">
-                <img src="graphics/horse-cats.jpg" alt="Our Barn Cats">
-                <div class="horse-name">Our Barn Cats</div>
-            </a>
-        </div>
+        <!-- Main content will go here -->
     </main>
 
     <!-- Include the footer -->
-    
     <footer><div id="footer-placeholder"></div></footer>
 
     <script>
@@ -124,8 +37,8 @@
             })
             .catch(error => console.error('Error loading footer:', error));
 
-       // Generate breadcrumb trail
-       function generateBreadcrumb() {
+        // Generate breadcrumb trail
+        function generateBreadcrumb() {
             const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
             const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
             let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
@@ -162,7 +75,6 @@
             };
 
             if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
-                // Only display "Home" without the carat and additional "Home"
                 breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
             } else {
                 let parent = 'index.html';
@@ -186,7 +98,6 @@
 
         // Call the function to generate the breadcrumb after the header is loaded
         document.addEventListener('DOMContentLoaded', generateBreadcrumb);
-
     </script>
 </body>
 </html>
