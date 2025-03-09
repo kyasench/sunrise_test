@@ -128,7 +128,7 @@
        // Generate breadcrumb trail
        function generateBreadcrumb() {
             const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
-            const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
+            const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test' && part !== 'horses');
             let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
             let currentPath = '/sunrise_test';
 
