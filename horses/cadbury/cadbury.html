@@ -1,0 +1,136 @@
+cadbury.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadbury - Sunrise Therapeutic Riding & Learning Centre</title>
+    <base href="../../">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><div id="header-placeholder"></div></header>
+
+    <main class="bottom-padding">
+        <div class="feature-image">
+            <img src="horses/cadbury/cadbury-main.jpg" alt="Cadbury" id="main-photo">
+        </div>
+
+        <div class="horse-profile">
+            <div class="profile-photo">
+                <img src="horses/cadbury/cadbury-standing.jpg" alt="Cadbury standing" id="profile-photo">
+            </div>
+            
+            <div class="profile-info">
+                <p><strong>Born:</strong> 2016</p>
+                <p><strong>Gender:</strong> Gelding</p>
+                <p><strong>Breed:</strong> Clydesdale/Hackney Cross</p>
+                <p><strong>Height:</strong> 16.2 hh</p>
+                <p><strong>Colour:</strong> Bay</p>
+                <p class="horse-description">Cadbury is a young bay gelding who has a gentle, calm, and willing nature. He is presently in our training program for future therapeutic work and has great potential.</p>
+            </div>
+        </div>
+
+        <div class="photo-gallery-section">
+            <p class="gallery-caption">Click on any image below to view my photo album</p>
+            <div class="photo-gallery">
+                <img src="horses/cadbury/cadbury-1.jpg" alt="Cadbury photo 1" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/cadbury/cadbury-2.jpg" alt="Cadbury photo 2" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/cadbury/cadbury-3.jpg" alt="Cadbury photo 3" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/cadbury/cadbury-4.jpg" alt="Cadbury photo 4" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/cadbury/cadbury-5.jpg" alt="Cadbury photo 5" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/cadbury/cadbury-6.jpg" alt="Cadbury photo 6" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+            </div>
+        </div>
+    </main>
+
+    <footer><div id="footer-placeholder"></div></footer>
+
+    <script>
+        // Load header and footer with correct paths
+        fetch("../../header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                generateBreadcrumb();
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        fetch("../../footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+
+        function updateProfilePhoto(src) {
+            document.getElementById('profile-photo').src = src;
+        }
+
+        function generateBreadcrumb() {
+            const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
+            const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test' && part !== 'horses' && part !== 'cadbury');
+            let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+            let currentPath = '/sunrise_test';
+
+            // Add Cadbury-specific mapping
+            const breadcrumbMapping = {
+                // ...existing mappings...
+                'index.html': { name: 'Home', parent: '' },
+                'about.html': { name: 'About Us', parent: 'index.html' },
+                'history.html': { name: 'History', parent: 'about.html' },
+                'governance.html': { name: 'Governance and Accountability', parent: 'about.html' },
+                'staff.html': { name: 'Sunrise Staff', parent: 'about.html' },
+                'facilities.html': { name: 'Our Facilities', parent: 'about.html' },
+                'horses.html': { name: 'Our Horses', parent: 'about.html' },
+                'cadbury.html': { name: 'Cadbury', parent: 'horses.html' }
+            'programs.html': { name: 'Programs', parent: 'index.html' },
+                'therapyprograms.html': { name: 'Therapy Programs', parent: 'programs.html' },
+                'campsunrise.html': { name: 'Camp Sunrise', parent: 'programs.html' },
+                'lifeskills.html': { name: 'Lifeskills Day Program', parent: 'programs.html' },
+                'littlebreeches.html': { name: 'Little Breeches', parent: 'programs.html' },
+                'studentinstructors.html': { name: 'Student Instructors', parent: 'programs.html' },
+                'EAL.html': { name: 'Equine Assisted Learning', parent: 'programs.html' },
+                'volunteer.html': { name: 'Volunteer', parent: 'index.html' },
+                'support.html': { name: 'Support Us', parent: 'index.html' },
+                'supportopportunities.html': { name: 'Support Opportunities', parent: 'support.html' },
+                'therapyforest.html': { name: 'Sunrise Therapy Forest', parent: 'support.html' },
+                'dropitoff.html': { name: 'Drop it Off for Sunrise', parent: 'support.html' },
+                'friendsofsunrise.html': { name: 'Friends of Sunrise', parent: 'support.html' },
+                'trailblazers.html': { name: 'Monthly Mini Trailblazers', parent: 'support.html' },
+                'whatshappening.html': { name: "What's Happening", parent: 'index.html' },
+                'celebratesunrise.html': { name: 'Celebrate Sunrise', parent: 'whatshappening.html' },
+                'newsletter.html': { name: 'Newsletter', parent: 'whatshappening.html' },
+                'upcomingevents.html': { name: 'Other Upcoming Events', parent: 'whatshappening.html' },
+                'contact.html': { name: 'Contact Us', parent: 'index.html' }
+            };
+
+            if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
+                // Only display "Home" without the carat and additional "Home"
+                breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+            } else {
+                let parent = 'index.html';
+                path.forEach((part, index) => {
+                    currentPath += '/' + part;
+                    const breadcrumbInfo = breadcrumbMapping[part] || { name: part.replace('.html', '').replace(/-/g, ' '), parent: parent };
+                    if (breadcrumbInfo.parent && breadcrumbInfo.parent !== 'index.html') {
+                        const parentInfo = breadcrumbMapping[breadcrumbInfo.parent];
+                        if (parentInfo) {
+                            breadcrumbHtml += ` > <a href="/sunrise_test/${breadcrumbInfo.parent}">${parentInfo.name}</a>`;
+                        }
+                    }
+                    breadcrumbHtml += ` > <a href="${currentPath}">${breadcrumbInfo.name}</a>`;
+                    parent = part;
+                });
+            }
+
+            breadcrumbHtml += '</nav>';
+            breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
+        }
+
+        // Call the function to generate the breadcrumb after the header is loaded
+        document.addEventListener('DOMContentLoaded', generateBreadcrumb);
+    </script>
+</body>
+</html>

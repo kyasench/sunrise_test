@@ -652,6 +652,74 @@ main {
     }
 }
 
+/* Styles for the horse-specific pages */
+
+.feature-image {
+    width: 66%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.feature-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.horse-profile {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.profile-photo {
+    flex: 1;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+    padding: 1rem;
+}
+
+.horse-description {
+    margin-top: 1rem;
+}
+
+.photo-gallery-section {
+    margin: 2rem 0;
+}
+
+.gallery-caption {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.photo-gallery .gallery-thumb {
+    width: calc(16.666% - 1rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.photo-gallery .gallery-thumb:hover {
+    transform: scale(1.1);
+}
 
 
 /* Styles for smaller screens (tablets, mobile devices) */
