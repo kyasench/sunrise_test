@@ -367,8 +367,6 @@ nav ul li .submenu li a:hover {
     background-color: #555;
 }
 
-
-
 .social-media {;
     justify-content: left;
     padding: 10px 0;
@@ -384,7 +382,7 @@ main {
 }
 
 .bottom-padding {
-    padding-top: .75rem;    /* Space between header and content */
+    padding-top: 1rem;    /* Space between header and content */
     padding-bottom: 2rem; /* Space between content and footer */
     padding-left: 1rem;   /* Left margin */
     padding-right: 1rem;  /* Right margin */
