@@ -383,6 +383,15 @@ main {
     padding-bottom: 1.25in;
 }
 
+.bottom-padding {
+    padding-top: 1rem;    /* Space between header and content */
+    padding-bottom: 2rem; /* Space between content and footer */
+    padding-left: 1rem;   /* Left margin */
+    padding-right: 1rem;  /* Right margin */
+}
+
+
+
 .menu {
     margin-right: 0in;
     padding-top: 0in;
