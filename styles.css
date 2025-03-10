@@ -108,6 +108,12 @@ header {
 
 /* text styles */
 
+.page-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
 .text-very-large {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem; /* Adjust the size as needed */
