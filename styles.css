@@ -527,7 +527,7 @@ main {
     transform: scale(1.1);
 }
 
-/* Styles for the horses page */
+/* Styles for the horses jump page */
 .horse-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
