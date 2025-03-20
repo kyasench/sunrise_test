@@ -3,33 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifeskills Day Program - Sunrise Therapeutic Riding & Learning Centre</title>
+    <title>Jackie - Sunrise Therapeutic Riding & Learning Centre</title>
+    <base href="../../">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Include the header -->
     <header><div id="header-placeholder"></div></header>
 
     <main class="bottom-padding">
-        <!-- Main content will go here -->
+        <p class="text-large page-title">Jackie</p>
+        <div class="feature-image">
+            <img src="horses/jackie/jackie-main.jpg" alt="Jackie" id="main-photo">
+        </div>
+
+        <div class="horse-profile">
+            <div class="profile-photo">
+                <img src="horses/jackie/jackie-standing.jpg" alt="Jackie" id="profile-photo">
+            </div>
+            
+            <div class="profile-info">
+                <p><strong>Born:</strong> 1998</p>
+                <p><strong>Gender:</strong> Mare</p>
+                <p><strong>Breed:</strong> Arab</p>
+                <p><strong>Height:</strong> 14.1 hh</p>
+                <p><strong>Colour:</strong> Grey</p>
+                <p class="horse-description">Jackie is a grey Arab pony mare, with a great disposition, who enjoys her role as a therapeutic riding pony. Being grey, it is not easy to keep her clean. She is also quite fond of the mud, and it is not uncommon to see her covered head to toe, much to the chagrin of anyone who has to get her ready for her lesson!</p>
+                <p><strong>Sponsor:</strong> Private Sponsor</p>
+            </div>
+        </div>
+
+        <div class="photo-gallery-section">
+            <p class="gallery-caption">Click on any image below to view more photos!</p>
+            <div class="photo-gallery">
+                <img src="horses/jackie/jackie-1.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/jackie/jackie-2.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/jackie/jackie-3.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/jackie/jackie-4.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/jackie/jackie-5.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/jackie/jackie-6.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/jackie/jackie-7.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/jackie/jackie-8.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/jackie/jackie-9.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/jackie/jackie-10.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+                <img src="horses/jackie/jackie-11.jpg" alt="Jackie" class="gallery-thumb" onclick="updateProfilePhoto(this.src)">
+            </div>
+        </div>
     </main>
 
-    <!-- Include the footer -->
     <footer><div id="footer-placeholder"></div></footer>
 
     <script>
-        // Load the header content from header.html
+        // Load header and footer with correct paths
         fetch("header.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
-                // Call the function to generate the breadcrumb after the header is loaded
                 generateBreadcrumb();
             })
             .catch(error => console.error('Error loading header:', error));
 
-        // Load the footer content from footer.html
         fetch("footer.html")
             .then(response => response.text())
             .then(data => {
@@ -37,64 +70,20 @@
             })
             .catch(error => console.error('Error loading footer:', error));
 
-        // Generate breadcrumb trail
-        function generateBreadcrumb() {
-            const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
-            const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
-            let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
-            let currentPath = '/sunrise_test';
-
-            // Mapping of URLs to breadcrumb names and their hierarchy
-            const breadcrumbMapping = {
-                'index.html': { name: 'Home', parent: '' },
-                'about.html': { name: 'About Us', parent: 'index.html' },
-                'history.html': { name: 'History', parent: 'about.html' },
-                'governance.html': { name: 'Governance and Accountability', parent: 'about.html' },
-                'staff.html': { name: 'Sunrise Staff', parent: 'about.html' },
-                'facilities.html': { name: 'Our Facilities', parent: 'about.html' },
-                'horses.html': { name: 'Our Horses', parent: 'about.html' },
-                'programs.html': { name: 'Programs', parent: 'index.html' },
-                'therapyprograms.html': { name: 'Therapy Programs', parent: 'programs.html' },
-                'campsunrise.html': { name: 'Camp Sunrise', parent: 'programs.html' },
-                'lifeskills.html': { name: 'Lifeskills Day Program', parent: 'programs.html' },
-                'littlebreeches.html': { name: 'Little Breeches', parent: 'programs.html' },
-                'studentinstructors.html': { name: 'Student Instructors', parent: 'programs.html' },
-                'EAL.html': { name: 'Equine Assisted Learning', parent: 'programs.html' },
-                'volunteer.html': { name: 'Volunteer', parent: 'index.html' },
-                'support.html': { name: 'Support Us', parent: 'index.html' },
-                'supportopportunities.html': { name: 'Support Opportunities', parent: 'support.html' },
-                'therapyforest.html': { name: 'Sunrise Therapy Forest', parent: 'support.html' },
-                'dropitoff.html': { name: 'Drop it Off for Sunrise', parent: 'support.html' },
-                'friendsofsunrise.html': { name: 'Friends of Sunrise', parent: 'support.html' },
-                'trailblazers.html': { name: 'Monthly Mini Trailblazers', parent: 'support.html' },
-                'whatshappening.html': { name: "What's Happening", parent: 'index.html' },
-                'celebratesunrise.html': { name: 'Celebrate Sunrise', parent: 'whatshappening.html' },
-                'newsletter.html': { name: 'Newsletter', parent: 'whatshappening.html' },
-                'upcomingevents.html': { name: 'Other Upcoming Events', parent: 'whatshappening.html' },
-                'contact.html': { name: 'Contact Us', parent: 'index.html' }
-            };
-
-            if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
-                breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
-            } else {
-                let parent = 'index.html';
-                path.forEach((part, index) => {
-                    currentPath += '/' + part;
-                    const breadcrumbInfo = breadcrumbMapping[part] || { name: part.replace('.html', '').replace(/-/g, ' '), parent: parent };
-                    if (breadcrumbInfo.parent && breadcrumbInfo.parent !== 'index.html') {
-                        const parentInfo = breadcrumbMapping[breadcrumbInfo.parent];
-                        if (parentInfo) {
-                            breadcrumbHtml += ` > <a href="/sunrise_test/${breadcrumbInfo.parent}">${parentInfo.name}</a>`;
-                        }
-                    }
-                    breadcrumbHtml += ` > <a href="${currentPath}">${breadcrumbInfo.name}</a>`;
-                    parent = part;
-                });
-            }
-
-            breadcrumbHtml += '</nav>';
-            breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
+        function updateProfilePhoto(src) {
+            document.getElementById('profile-photo').src = src;
         }
+
+        function generateBreadcrumb() {
+    const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
+    let breadcrumbHtml = '<nav class="breadcrumb">';
+    breadcrumbHtml += '<a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+    breadcrumbHtml += ' > <a href="about.html">About Us</a>';
+    breadcrumbHtml += ' > <a href="horses/horses.html">Our Horses</a>';
+    breadcrumbHtml += ' > <span>Jackie</span>';
+    breadcrumbHtml += '</nav>';
+    breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
+}
 
         // Call the function to generate the breadcrumb after the header is loaded
         document.addEventListener('DOMContentLoaded', generateBreadcrumb);
