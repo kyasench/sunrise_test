@@ -736,6 +736,13 @@ main {
     transform: scale(1.1);
 }
 
+/* Styles for the Programs page */
+
+.blue-divider {
+    height: 2px;
+    background-color: #1a69e0;
+    margin: 2rem 0;
+}
 
 /* Styles for smaller screens (tablets, mobile devices) */
 @media (max-width: 768px) {

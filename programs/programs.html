@@ -3,55 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Our Programs</title>
+    <base href="../">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-        
-  
-  <!-- Include the header -->
- <div id="header-placeholder"></div>
-  
+    <!-- Include the header -->
+    
+    <header><div id="header-placeholder"></div></header>
+
     <main class="bottom-padding">
-        <center>
-        <img src="graphics/eventAnnouncement.jpeg" alt="Celebrate Sunrise 2025" width="100%" height="auto">
-        <p class="text-very-large">Sunrise Therapeutic Riding & Learning Centre</p>
-        <p class="text-large">Puslinch, Ontario, Canada</p>
-        <img src="graphics/sunriselogo-250x250.png" alt="Sunrise Logo" width="25%" height="auto">
-        <p class="text-medium">To develop the full potential of children and adults with special needs through therapy, education, horse riding, recreation, and life skills programs, farm-related and social activities, and to further develop and expand Sunrise’s programming to support a Residence/Respite Village Community.</p>
-        <div class="flex-container">
-            <div class="left-element">
-                <img src="graphics/cantra-1.png" alt="Left Image" width="100" height="100">
+        <div class="blue-divider"></div>
+        <p class="text-large">Therapy Programs</p>
+        <div class="thumbnail-row">
+            <div class="thumbnail-wrapper">
+                <a href="programs/TherapeuticRiding.html">
+                    <img src="programs/graphics/therapeutic-riding.jpg" alt="Therapeutic Riding" class="thumbnail">
+                    <button class="thumbnail-button">Therapeutic Riding</button>
+                </a>
             </div>
-            <div class="center-element">
-                <p class="text-medium-small">  <b>Accredited Member of:</b><br><br>
-                    Canadian Therapeutic Riding Association (CanTRA)<br>
-                    Ontario Camps Association (OCA)</p>
+            <div class="thumbnail-wrapper">
+                <a href="programs/EquineAssistedWellness.html">
+                    <img src="programs/graphics/equine-wellness.jpg" alt="Equine Facilitated Wellness" class="thumbnail">
+                    <button class="thumbnail-button">Equine Facilitated Wellness</button>
+                </a>
             </div>
-            <div class="right-element">
-                <img src="graphics/oca.png" alt="Right Image" width="100" height="100">
+            <div class="thumbnail-wrapper">
+                <a href="programs/GroupVisits.html">
+                    <img src="programs/graphics/group-visits.jpg" alt="Group Visits" class="thumbnail">
+                    <button class="thumbnail-button">Group Visits</button>
+                </a>
+            </div>
+            <div class="thumbnail-wrapper">
+                <a href="programs/GroomingProgram.html">
+                    <img src="programs/graphics/grooming.jpg" alt="Grooming Program" class="thumbnail">
+                    <button class="thumbnail-button">Grooming Program</button>
+                </a>
             </div>
         </div>
-    </center>
-    <div class="transparent-box">
-        <p>We acknowledge with gratitude this traditional territory inhabited by the Attawandaron people before Europeans settled here. We acknowledge other First Nations neighbours including the Haudenosaunee, the Anishnaabe and The Métis nation. We seek a new relationship with the Original Peoples of this land based on honour and deep respect.</p>
-    </div>
     
+        <div class="blue-divider"></div>
+        <p class="text-large">Camp Sunrise</p>
+        <div class="thumbnail-row">
+            <div class="thumbnail-wrapper">
+                <a href="programs/FarmDiscovery.html">
+                    <img src="programs/graphics/farm-discovery.jpg" alt="Farm Discovery" class="thumbnail">
+                    <button class="thumbnail-button">Farm Discovery (Ages 5-8)</button>
+                </a>
+            </div>
+            <div class="thumbnail-wrapper">
+                <a href="programs/RidingCamp.html">
+                    <img src="programs/graphics/riding-camp.jpg" alt="Riding Camp" class="thumbnail">
+                    <button class="thumbnail-button">Riding Camp (Ages 8-13)</button>
+                </a>
+            </div>
+            <div class="thumbnail-wrapper">
+                <a href="programs/LeaderInTraining.html">
+                    <img src="programs/graphics/leader-training.jpg" alt="Leader in Training" class="thumbnail">
+                    <button class="thumbnail-button">Leader in Training (Ages 13+)</button>
+                </a>
+            </div>
+            <div class="thumbnail-wrapper">
+                <a href="programs/CampFAQ.html">
+                    <img src="programs/graphics/camp-faq.jpg" alt="Contact & FAQ" class="thumbnail">
+                    <button class="thumbnail-button">Contact & FAQ</button>
+                </a>
+            </div>
+        </div>
     
-
-    <!-- Main content goes htestere -->
+        <div class="blue-divider"></div>
+        <p class="text-large">Life Skills</p>
+        <div class="thumbnail-row">
+            <div class="thumbnail-wrapper">
+                <a href="programs/LifeSkills.html">
+                    <img src="programs/graphics/life-skills.jpg" alt="Life Skills Day Program" class="thumbnail">
+                    <button class="thumbnail-button">Life Skills Day Program</button>
+                </a>
+            </div>
+        </div>
+    
+        <div class="blue-divider"></div>
+        <p class="text-large">Other Programs</p>
+        <div class="thumbnail-row">
+            <div class="thumbnail-wrapper">
+                <a href="programs/LittleBreeches.html">
+                    <img src="programs/graphics/little-breeches.jpg" alt="Little Breeches & Mini Moments" class="thumbnail">
+                    <button class="thumbnail-button">Little Breeches & Mini Moments</button>
+                </a>
+            </div>
+            <div class="thumbnail-wrapper">
+                <a href="programs/EquineAssistedLearning.html">
+                    <img src="programs/graphics/equine-learning.jpg" alt="Equine Assisted Learning" class="thumbnail">
+                    <button class="thumbnail-button">Equine Assisted Learning</button>
+                </a>
+            </div>
+        </div>
     </main>
 
- <!-- Include the footer -->
- <div id="footer-placeholder"></div>
+    <!-- Include the footer -->
+    
+    <footer><div id="footer-placeholder"></div></footer>
 
- <script>
-    
-    
-      // Load the header content from header.html
-      fetch("header.html")
+    <script>
+        // Load the header content from header.html
+        fetch("header.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
@@ -60,21 +116,18 @@
             })
             .catch(error => console.error('Error loading header:', error));
 
-    
-    
-    // Load the footer content from footer.html
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading footer:', error));
-
+        // Load the footer content from footer.html
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
 
        // Generate breadcrumb trail
        function generateBreadcrumb() {
             const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
-            const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
+            const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test' && part !== 'horses');
             let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
             let currentPath = '/sunrise_test';
 
@@ -134,7 +187,6 @@
         // Call the function to generate the breadcrumb after the header is loaded
         document.addEventListener('DOMContentLoaded', generateBreadcrumb);
 
-</script>
-
+    </script>
 </body>
 </html>
