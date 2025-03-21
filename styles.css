@@ -757,6 +757,40 @@ main {
     }
 }
 
+/* styles for the camp sunrise rotating quotes */
+.quote-section {
+    overflow: hidden;
+    width: 80%;
+    margin: 3rem auto;
+    position: relative;
+}
+
+.quote-text {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: transform 1s ease-in-out;
+}
+
+.quote-author {
+    text-align: center;
+    font-weight: bold;
+    transition: transform 1s ease-in-out;
+}
+
+.slide-in {
+    transform: translateX(100%);
+}
+
+.slide-center {
+    transform: translateX(0);
+}
+
+.slide-out {
+    transform: translateX(-100%);
+}
+
+
 /* Footer styles */
 .footer-top {
     background-color: #303030; /* Dark grey background */

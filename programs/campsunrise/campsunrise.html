@@ -140,17 +140,43 @@
     let currentQuote = 0;
     
     function displayQuote() {
-        const quoteContainer = document.getElementById('quote-container');
-        const quote = quotes[currentQuote];
-        quoteContainer.innerHTML = `
-            <p class="quote-text">"${quote.text}"</p>
-            <p class="quote-author">- ${quote.author}</p>
-        `;
-        currentQuote = (currentQuote + 1) % quotes.length;
-    }
+    const quoteContainer = document.getElementById('quote-container');
+    const quote = quotes[currentQuote];
+    
+    // Create new quote elements
+    const newQuote = document.createElement('div');
+    newQuote.innerHTML = `
+        <p class="quote-text slide-in">"${quote.text}"</p>
+        <p class="quote-author slide-in">- ${quote.author}</p>
+    `;
+    
+    // Add new quote while it's off-screen
+    quoteContainer.appendChild(newQuote);
+    
+    // Force browser to recognize the new elements
+    void newQuote.offsetWidth;
+    
+    // Slide in
+    newQuote.querySelector('.quote-text').classList.replace('slide-in', 'slide-center');
+    newQuote.querySelector('.quote-author').classList.replace('slide-in', 'slide-center');
+    
+    // After 29 seconds, start sliding out
+    setTimeout(() => {
+        newQuote.querySelector('.quote-text').classList.replace('slide-center', 'slide-out');
+        newQuote.querySelector('.quote-author').classList.replace('slide-center', 'slide-out');
+        
+        // Remove the element after animation completes
+        setTimeout(() => {
+            quoteContainer.removeChild(newQuote);
+        }, 1000);
+    }, 29000);
+    
+    currentQuote = (currentQuote + 1) % quotes.length;
+}
 
-    displayQuote();
-    setInterval(displayQuote, 30000);
+// Initial display and start interval
+displayQuote();
+setInterval(displayQuote, 30000);
     </script>
 </body>
 </html>
