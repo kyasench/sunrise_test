@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History</title>
+    <title>Equine Assisted Learning (EAL)</title>
+    <base href="../../">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -13,7 +14,40 @@
     <header><div id="header-placeholder"></div></header>
 
     <main class="bottom-padding">
-        <!-- Main content goes here -->
+        <div class="content-section">
+            <p class="text-medium-small">
+                Equine Assisted Learning (EAL) is an empowering method used to develop effective personal development through the use of a horse. Similar to horses, people interact in various group settings throughout their lives. Families, friends, sports teams, and colleagues develop their dynamics from which communication and effectiveness emerge.
+            </p>
+    
+            <p class="text-medium-small">
+                With the assistance of horses, participants take part in various experiential learning exercises that aid in relationship and life skills. The activities are selected by a certified EAL facilitator based on your needs and dynamics. This is not a riding program, although horses are an integral part of these sessions. EAL is proven to improve: Communication, Problem Solving, Leadership Skills, Team Building and Life Skills.
+            </p>
+    
+            <p class="text-medium-small">
+                Sessions are led by Suzy Bender, Certified EAL Facilitator, EC Coach 1, and CanTRA Coach
+            </p>
+    
+            <p class="text-medium-small">This program is great for:</p>
+            <ul class="text-medium-small bulleted-list">
+                <li>Family Workshops</li>
+                <li>Youth Leadership</li>
+                <li>Corporate Groups</li>
+                <li>Sports Teams</li>
+                <li>Personal Development</li>
+            </ul>
+    
+            <p class="text-medium-small">Interested in finding out more?</p>
+            <p class="text-medium-small">
+                Contact Suzy at <a href="tel:519-837-0558">519-837-0558 x22</a> or 
+                <a href="mailto:suzy@sunrise-therapeutic.ca">suzy@sunrise-therapeutic.ca</a>
+            </p>
+        </div>
+    
+        <div style="display: flex; gap: 1rem; margin: 2rem 0;">
+            <img src="programs/eal/eal-1.jpg" alt="Equine Assisted Learning" style="width: calc(33.333% - 0.667rem); height: auto;">
+            <img src="programs/eal/eal-2.jpg" alt="Equine Assisted Learning" style="width: calc(33.333% - 0.667rem); height: auto;">
+            <img src="programs/eal/eal-3.jpg" alt="Equine Assisted Learning" style="width: calc(33.333% - 0.667rem); height: auto;">
+        </div>
     </main>
 
     <!-- Include the footer -->
@@ -39,69 +73,21 @@
             })
             .catch(error => console.error('Error loading footer:', error));
 
-       // Generate breadcrumb trail
-       function generateBreadcrumb() {
-            const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
-            const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
-            let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
-            let currentPath = '/sunrise_test';
-
-            // Mapping of URLs to breadcrumb names and their hierarchy
-            const breadcrumbMapping = {
-                'index.html': { name: 'Home', parent: '' },
-                'about.html': { name: 'About Us', parent: 'index.html' },
-                'history.html': { name: 'History', parent: 'about.html' },
-                'governance.html': { name: 'Governance and Accountability', parent: 'about.html' },
-                'staff.html': { name: 'Sunrise Staff', parent: 'about.html' },
-                'facilities.html': { name: 'Our Facilities', parent: 'about.html' },
-                'horses.html': { name: 'Our Horses', parent: 'about.html' },
-                'programs.html': { name: 'Programs', parent: 'index.html' },
-                'therapyprograms.html': { name: 'Therapy Programs', parent: 'programs.html' },
-                'campsunrise.html': { name: 'Camp Sunrise', parent: 'programs.html' },
-                'lifeskills.html': { name: 'Lifeskills Day Program', parent: 'programs.html' },
-                'littlebreeches.html': { name: 'Little Breeches', parent: 'programs.html' },
-                'studentinstructors.html': { name: 'Student Instructors', parent: 'programs.html' },
-                'EAL.html': { name: 'Equine Assisted Learning', parent: 'programs.html' },
-                'volunteer.html': { name: 'Volunteer', parent: 'index.html' },
-                'support.html': { name: 'Support Us', parent: 'index.html' },
-                'supportopportunities.html': { name: 'Support Opportunities', parent: 'support.html' },
-                'therapyforest.html': { name: 'Sunrise Therapy Forest', parent: 'support.html' },
-                'dropitoff.html': { name: 'Drop it Off for Sunrise', parent: 'support.html' },
-                'friendsofsunrise.html': { name: 'Friends of Sunrise', parent: 'support.html' },
-                'trailblazers.html': { name: 'Monthly Mini Trailblazers', parent: 'support.html' },
-                'whatshappening.html': { name: "What's Happening", parent: 'index.html' },
-                'celebratesunrise.html': { name: 'Celebrate Sunrise', parent: 'whatshappening.html' },
-                'newsletter.html': { name: 'Newsletter', parent: 'whatshappening.html' },
-                'upcomingevents.html': { name: 'Other Upcoming Events', parent: 'whatshappening.html' },
-                'contact.html': { name: 'Contact Us', parent: 'index.html' }
-            };
-
-            if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
-                // Only display "Home" without the carat and additional "Home"
-                breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
-            } else {
-                let parent = 'index.html';
-                path.forEach((part, index) => {
-                    currentPath += '/' + part;
-                    const breadcrumbInfo = breadcrumbMapping[part] || { name: part.replace('.html', '').replace(/-/g, ' '), parent: parent };
-                    if (breadcrumbInfo.parent && breadcrumbInfo.parent !== 'index.html') {
-                        const parentInfo = breadcrumbMapping[breadcrumbInfo.parent];
-                        if (parentInfo) {
-                            breadcrumbHtml += ` > <a href="/sunrise_test/${breadcrumbInfo.parent}">${parentInfo.name}</a>`;
-                        }
-                    }
-                    breadcrumbHtml += ` > <a href="${currentPath}">${breadcrumbInfo.name}</a>`;
-                    parent = part;
-                });
-            }
-
-            breadcrumbHtml += '</nav>';
-            breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
-        }
+        // Generate breadcrumb trail
+        function generateBreadcrumb() {
+    const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
+    let breadcrumbHtml = '<nav class="breadcrumb">';
+    breadcrumbHtml += '<a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+    breadcrumbHtml += ' > <a href="programs.html">Programs</a>';
+    breadcrumbHtml += ' > <a href="programs/campsunrise/campsunrise.html">Equine Assisted Learning</a>';
+    breadcrumbHtml += '</nav>';
+    breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
+}
 
         // Call the function to generate the breadcrumb after the header is loaded
         document.addEventListener('DOMContentLoaded', generateBreadcrumb);
 
+   
     </script>
 </body>
 </html>
