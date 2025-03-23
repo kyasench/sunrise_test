@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><div id="header-placeholder"></div></header>
+
+    <main class="bottom-padding">
+        <!-- Initial content section -->
+        <div style="text-align: center; line-height: 2; margin: 3rem 0;">
+            <p class="text-very-large">With the help of generous individuals, organizations and businesses,</p>
+            <p class="text-very-large">we are able to make a remarkable difference in the lives of those living with special needs.</p>
+            <p style="font-size: 1.5rem; color: #008080;">
+                <a href="supportus/friendsofsunrise.html" style="color: inherit; text-decoration: none;">Meet our Friends of Sunrise!</a>
+            </p>
+            
+            <a href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E363411QE&id=2" 
+               class="donate-button" 
+               target="_blank">
+                Donate Now
+            </a>
+
+            <p class="text-medium-small" style="margin-top: 2rem;">
+                Please contact us for more information on these initiatives, to book a tour, or schedule a speaker for your group.
+            </p>
+        </div>
+
+        <!-- Therapeutic Riding Program section -->
+        <p style="font-size: 1.75rem; font-weight: bold; text-decoration: underline; margin: 2rem 0;">
+            Therapeutic Riding Program: Harnessing Dreams…Unleashing Potential
+        </p>
+
+        <!-- First row of sponsorship options -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin: 2rem 0;">
+            <!-- Amy Turner Memorial -->
+            <div style="text-align: center;">
+                <img src="supportus/amyturner.jpg" alt="Amy Turner Memorial" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Amy Turner Memorial Sunrise Scholarship Fund</p>
+                <button onclick="showPopup('amyTurnerPopup')" style="background: none; border: none; color: #1a69e0; cursor: pointer; text-decoration: underline;">Learn more...</button>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$450.00</p>
+            </div>
+
+            <!-- Big Fun in a Mini Size -->
+            <div style="text-align: center;">
+                <img src="supportus/2horses.png" alt="Big Fun in a Mini Size" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Big Fun in a Mini Size</p>
+                <p style="margin: 0.5rem 0;">Provide one year's worth of exemplary care for one of our miniature horses</p>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$1,500.00</p>
+            </div>
+
+            <!-- Carrots -->
+            <div style="text-align: center;">
+                <img src="supportus/carrots.jpg" alt="Carrots for 1 Horse" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Carrots for 1 Horse for 1 year</p>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$35.00</p>
+            </div>
+
+            <!-- Feed a horse -->
+            <div style="text-align: center;">
+                <img src="supportus/riding-camp.jpg" alt="Feed a horse" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Feed a horse for a month</p>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$100.00</p>
+            </div>
+        </div>
+
+        <!-- Second row of sponsorship options -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin: 2rem 0;">
+            <!-- Hearts and Hooves Half -->
+            <div style="text-align: center;">
+                <img src="supportus/heartsandhooveshalfsponsor.jpg" alt="Hearts and Hooves Half Sponsor" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Hearts and Hooves: Horse Co-sponsor</p>
+                <button onclick="showPopup('halfSponsorPopup')" style="background: none; border: none; color: #1a69e0; cursor: pointer; text-decoration: underline;">Learn more...</button>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$2,500.00</p>
+            </div>
+
+            <!-- Hearts and Hooves Full -->
+            <div style="text-align: center;">
+                <img src="supportus/heartsandhoovesfullsponsor.jpg" alt="Hearts and Hooves Full Sponsor" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Hearts and Hooves Full Horse Sponsor</p>
+                <button onclick="showPopup('fullSponsorPopup')" style="background: none; border: none; color: #1a69e0; cursor: pointer; text-decoration: underline;">Learn more...</button>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$5,000.00</p>
+            </div>
+
+            <!-- Keeping Warm -->
+            <div style="text-align: center;">
+                <img src="supportus/keepwarminwinter.png" alt="Keeping Warm Package" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Keeping Warm in Winter Package</p>
+                <button onclick="showPopup('warmPopup')" style="background: none; border: none; color: #1a69e0; cursor: pointer; text-decoration: underline;">Learn more...</button>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$750.00</p>
+            </div>
+
+            <!-- Paddock Sponsor -->
+            <div style="text-align: center;">
+                <img src="supportus/paddocksponsor.jpg" alt="Paddock Sponsor" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Paddock Sponsor</p>
+                <button onclick="showPopup('paddockPopup')" style="background: none; border: none; color: #1a69e0; cursor: pointer; text-decoration: underline;">Learn more...</button>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$1,000.00</p>
+            </div>
+        </div>
+
+        <!-- Single stall sponsor -->
+        <div style="width: 25%; margin: 2rem 0;">
+            <div style="text-align: center;">
+                <img src="supportus/stallsponsor.jpg" alt="Stall Sponsor" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Stall Sponsor</p>
+                <button onclick="showPopup('stallPopup')" style="background: none; border: none; color: #1a69e0; cursor: pointer; text-decoration: underline;">Learn more...</button>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$5,000.00</p>
+            </div>
+        </div>
+
+        <!-- Camp Sunrise section -->
+        <p style="font-size: 1.75rem; font-weight: bold; text-decoration: underline; margin: 2rem 0;">
+            Camp Sunrise: Embracing Inclusion
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin: 2rem 0;">
+            <!-- Camp sponsorship options -->
+            <div style="text-align: center;">
+                <img src="supportus/ridingcampcampersponsor.jpg" alt="Riding Camp Sponsor" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Making Summer Memories: Sponsor a Riding Camp Camper</p>
+                <p style="margin: 0.5rem 0;">Send a child to Riding Camp (2 weeks)</p>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$600.00</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img src="supportus/farmdiscoverycampersponsor.jpg" alt="Farm Discovery Sponsor" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Making Summer Memories: Sponsor a Farm Discovery Camper</p>
+                <p style="margin: 0.5rem 0;">Send a child to attend Farm Discovery Camp (1 week)</p>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$200.00</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img src="supportus/poolmaintenancesponsor.jpg" alt="Pool Maintenance" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Pool Maintenance Package</p>
+                <button onclick="showPopup('poolPopup')" style="background: none; border: none; color: #1a69e0; cursor: pointer; text-decoration: underline;">Learn more...</button>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$1,000.00</p>
+            </div>
+        </div>
+
+        <!-- Other Activities section -->
+        <p style="font-size: 1.75rem; font-weight: bold; text-decoration: underline; margin: 2rem 0;">
+            Other Sunrise Activities:
+        </p>
+
+        <div style="width: 25%; margin: 2rem 0;">
+            <div style="text-align: center;">
+                <img src="supportus/xmaspartysponsor.jpg" alt="Christmas Party Sponsor" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                <p style="margin: 1rem 0;">Sponsor Christmas Party for Sunrise Riders</p>
+                <p style="color: #008080; font-size: 1.25rem; font-weight: bold;">$50.00</p>
+            </div>
+        </div>
+    </main>
+
+    <footer><div id="footer-placeholder"></div></footer>
+
+    <!-- Popup templates -->
+    <div id="amyTurnerPopup" class="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;">
+        <div style="background: white; padding: 2rem; width: 80%; max-width: 600px; margin: 10% auto; position: relative; border-radius: 8px;">
+            <span onclick="closePopup('amyTurnerPopup')" style="position: absolute; right: 1rem; top: 0.5rem; font-size: 2rem; cursor: pointer;">&times;</span>
+            <ul>
+                <li>Provide a full semester of therapeutic riding lessons for a local child</li>
+                <li>Provide 4 weeks of lessons for a group of 4-5 children from a special education class</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Add similar popup divs for other "Learn more" options -->
+
+    <script>
+        // Load the header content from header.html
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                // Call the function to generate the breadcrumb after the header is loaded
+                generateBreadcrumb();
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Load the footer content from footer.html
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+
+       // Generate breadcrumb trail
+       function generateBreadcrumb() {
+            const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
+            const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
+            let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+            let currentPath = '/sunrise_test';
+
+            // Mapping of URLs to breadcrumb names and their hierarchy
+            const breadcrumbMapping = {
+                'index.html': { name: 'Home', parent: '' },
+                'about.html': { name: 'About Us', parent: 'index.html' },
+                'history.html': { name: 'History', parent: 'about.html' },
+                'governance.html': { name: 'Governance and Accountability', parent: 'about.html' },
+                'staff.html': { name: 'Sunrise Staff', parent: 'about.html' },
+                'facilities.html': { name: 'Our Facilities', parent: 'about.html' },
+                'horses.html': { name: 'Our Horses', parent: 'about.html' },
+                'programs.html': { name: 'Programs', parent: 'index.html' },
+                'therapyprograms.html': { name: 'Therapy Programs', parent: 'programs.html' },
+                'campsunrise.html': { name: 'Camp Sunrise', parent: 'programs.html' },
+                'lifeskills.html': { name: 'Lifeskills Day Program', parent: 'programs.html' },
+                'littlebreeches.html': { name: 'Little Breeches', parent: 'programs.html' },
+                'studentinstructors.html': { name: 'Student Instructors', parent: 'programs.html' },
+                'EAL.html': { name: 'Equine Assisted Learning', parent: 'programs.html' },
+                'volunteer.html': { name: 'Volunteer', parent: 'index.html' },
+                'support.html': { name: 'Support Us', parent: 'index.html' },
+                'supportopportunities.html': { name: 'Support Opportunities', parent: 'support.html' },
+                'therapyforest.html': { name: 'Sunrise Therapy Forest', parent: 'support.html' },
+                'dropitoff.html': { name: 'Drop it Off for Sunrise', parent: 'support.html' },
+                'friendsofsunrise.html': { name: 'Friends of Sunrise', parent: 'support.html' },
+                'trailblazers.html': { name: 'Monthly Mini Trailblazers', parent: 'support.html' },
+                'whatshappening.html': { name: "What's Happening", parent: 'index.html' },
+                'celebratesunrise.html': { name: 'Celebrate Sunrise', parent: 'whatshappening.html' },
+                'newsletter.html': { name: 'Newsletter', parent: 'whatshappening.html' },
+                'upcomingevents.html': { name: 'Other Upcoming Events', parent: 'whatshappening.html' },
+                'contact.html': { name: 'Contact Us', parent: 'index.html' }
+            };
+
+            if (path.length === 0 || (path.length === 1 && (path[0] === 'index.html' || path[0] === ''))) {
+                // Only display "Home" without the carat and additional "Home"
+                breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+            } else {
+                let parent = 'index.html';
+                path.forEach((part, index) => {
+                    currentPath += '/' + part;
+                    const breadcrumbInfo = breadcrumbMapping[part] || { name: part.replace('.html', '').replace(/-/g, ' '), parent: parent };
+                    if (breadcrumbInfo.parent && breadcrumbInfo.parent !== 'index.html') {
+                        const parentInfo = breadcrumbMapping[breadcrumbInfo.parent];
+                        if (parentInfo) {
+                            breadcrumbHtml += ` > <a href="/sunrise_test/${breadcrumbInfo.parent}">${parentInfo.name}</a>`;
+                        }
+                    }
+                    breadcrumbHtml += ` > <a href="${currentPath}">${breadcrumbInfo.name}</a>`;
+                    parent = part;
+                });
+            }
+
+            breadcrumbHtml += '</nav>';
+            breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
+        }
+
+        // Call the function to generate the breadcrumb after the header is loaded
+        document.addEventListener('DOMContentLoaded', generateBreadcrumb);
+
+
+        // Popup functionality
+        function showPopup(popupId) {
+            document.getElementById(popupId).style.display = 'block';
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('popup')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
