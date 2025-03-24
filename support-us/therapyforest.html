@@ -107,14 +107,14 @@
 
 // Simple breadcrumb generation
 function generateBreadcrumb() {
-        const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
-        let breadcrumbHtml = '<nav class="breadcrumb">';
-        breadcrumbHtml += '<a href="https://kyasench.github.io/sunrise_test/">Home</a>';
-        breadcrumbHtml += ' > <a href="support-us/support-us.html">Support Us</a>';
-        breadcrumbHtml += ' > <span>Sunrise Therapy Forest</span>';
-        breadcrumbHtml += '</nav>';
-        breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
-    }
+    const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
+    let breadcrumbHtml = '<nav class="breadcrumb">';
+    breadcrumbHtml += '<a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+    breadcrumbHtml += ' > <a href="../support-us.html">Support Us</a>';
+    breadcrumbHtml += ' > <span>Sunrise Therapy Forest</span>';
+    breadcrumbHtml += '</nav>';
+    breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
+}
 
     // Call the function to generate the breadcrumb after the header is loaded
     document.addEventListener('DOMContentLoaded', generateBreadcrumb);
