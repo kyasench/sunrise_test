@@ -380,6 +380,41 @@ nav ul li .submenu li a:hover {
     text-indent: 1in;
 }
 
+/* SUB-SUBMENU STYLES */
+
+.submenu .submenu {
+    left: 100%;
+    top: 0;
+}
+
+.menu > ul > li > ul > li:hover > ul,
+.menu > ul > li > ul > li > ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.submenu {
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.submenu li {
+    position: relative;  /* This ensures third level menus position correctly */
+}
+
+
+
+/* END of SUB-SUBMENU STYLES */
+
+
+
 
 
 
