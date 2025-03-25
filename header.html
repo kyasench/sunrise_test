@@ -45,8 +45,23 @@
                 <li>
                     <a href="programs/programs.html">Programs</a>
                     <ul class="submenu">
-                        <li><a href="programs/therapyprograms/therapyprograms.html">Therapy Programs</a></li>
-                        <li><a href="programs/campsunrise/campsunrise.html">Camp Sunrise</a></li>
+                        <li>
+                            <a href="programs/therapyprograms/therapyprograms.html">Therapy Programs</a>
+                            <ul class="sub-submenu" style="position: absolute; left: 100%; top: 0; display: none; background-color: #fff; min-width: 200px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 1000;">
+                                <li><a href="programs/therapyprograms/therapeutic-riding.html">Therapeutic Riding</a></li>
+                                <li><a href="programs/therapyprograms/groupvisits.html">Group Visits</a></li>
+                                <li><a href="programs/therapyprograms/groomingdriving.html">Grooming & Driving Programs</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="programs/campsunrise/campsunrise.html">Camp Sunrise</a>
+                            <ul class="sub-submenu" style="position: absolute; left: 100%; top: 0; display: none; background-color: #fff; min-width: 200px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 1000;">
+                                <li><a href="programs/campsunrise/camp-farm-discovery.html">Farm Discovery (ages 5-8)</a></li>
+                                <li><a href="programs/campsunrise/camp-horse-camp.html">Horse Camp (ages 8-13+)</a></li>
+                                <li><a href="programs/campsunrise/camp-lit.html">Leader in Training (ages 13-16)</a></li>
+                                <li><a href="programs/campsunrise/camp-contact-faq.html">Camp Contact Info & FAQs</a></li>
+                            </ul>
+                        </li>
                         <li><a href="programs/lifeskills/lifeskills.html">Lifeskills Day Program</a></li>
                         <li><a href="programs/littlebreeches/littlebreeches.html">Little Breeches</a></li>
                         <li><a href="programs/studentinstructors/studentinstructors.html">Student Instructors</a></li>
@@ -75,5 +90,24 @@
             </ul>
         </nav>
 </div>
+
+<style>
+    .submenu li:hover > .sub-submenu {
+        display: block !important;
+    }
+    
+    .sub-submenu li a {
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        display: block;
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .sub-submenu li a:hover {
+        background-color: #555;
+        color: #fff;
+    }
+</style>
 </header>
 
