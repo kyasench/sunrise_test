@@ -18,7 +18,8 @@
         <div style="display: flex; gap: 2rem; margin: 2rem 0;">
             <!-- Left column - Text content -->
             <div style="flex: 3;">
-                <h2 class="text-large">Who We Serve</h2>
+                <h2 class="text-large">Sunrise Therapeutic Riding Program</h2>
+                <p class="text-medium">Who this Program Serves</p>
                 <p class="text-medium-small">Our Therapeutic Riding program is designed for individuals aged 3 & up with physical and/or cognitive special needs, including (but not limited to) those with autism, ADHD, developmental delays, cerebral palsy, Down syndrome, visual impairments or hearing impairments.</p>
     
                 <h2 class="text-large">Benefits of Therapeutic Riding</h2>
@@ -179,7 +180,7 @@
                     ▼ What if I can't afford the lesson fees?
                 </summary>
                 <p style="margin-top: 0.5rem; padding-left: 1.5rem;">
-                    Sunrise has a "Scholarship Fund" for riders with special needs for financially-marginalized. For more information about our scholarship fund please <a href="programs/therapyprograms/scholarships.html">click here</a>
+                    Sunrise has a "Scholarship Fund" for riders with special needs for financially-marginalized. For more information about our scholarship fund please <a href="/scholarships.html">click here</a>
                 </p>
             </details>
         </div>
@@ -211,18 +212,17 @@
             .catch(error => console.error('Error loading footer:', error));
 
         // Generate breadcrumb trail
-        function generateBreadcrumb() {
-    const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
-    let breadcrumbHtml = '<nav class="breadcrumb">';
-    breadcrumbHtml += '<a href="https://kyasench.github.io/sunrise_test/">Home</a>';
-    breadcrumbHtml += ' > <a href="programs.html">Programs</a>';
-    breadcrumbHtml += ' > <a href="programs/therapyprograms/therapyprograms.html">Therapy Programs</a>';
-    breadcrumbHtml += '</nav>';
-    breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
-}
-
-        // Call the function to generate the breadcrumb after the header is loaded
-        document.addEventListener('DOMContentLoaded', generateBreadcrumb);
+// Generate breadcrumb
+function generateBreadcrumb() {
+            const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
+            let breadcrumbHtml = '<nav class="breadcrumb">';
+            breadcrumbHtml += '<a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+            breadcrumbHtml += ' > <a href="programs.html">Programs</a>';
+            breadcrumbHtml += ' > <a href="programs/therapyprograms/therapyprograms.html">Therapy Programs</a>';
+            breadcrumbHtml += ' > <span>Therapeutic Riding</span>';
+            breadcrumbHtml += '</nav>';
+            breadcrumbPlaceholder.innerHTML = breadcrumbHtml;
+        }
     </script>
 </body>
 </html>
