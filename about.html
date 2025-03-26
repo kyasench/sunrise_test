@@ -132,7 +132,7 @@
        function generateBreadcrumb() {
             const breadcrumbPlaceholder = document.getElementById('breadcrumb-placeholder');
             const path = window.location.pathname.split('/').filter(part => part && part !== 'sunrise_test');
-            let breadcrumbHtml = '<nav class="breadcrumb"><a href="https://kyasench.github.io/sunrise_test/">Home</a>';
+            let breadcrumbHtml = '<nav class="breadcrumb"><a href="./">Home</a>';
             let currentPath = '/sunrise_test';
 
             // Mapping of URLs to breadcrumb names and their hierarchy
